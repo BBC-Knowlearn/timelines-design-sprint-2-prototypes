@@ -1,0 +1,157 @@
+<html>
+<head>
+<style>
+@font-face {
+    font-family: 'CuriousSans-Bold';
+    src: url("../../font/CuriousSans-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: Arial;
+}
+
+#widget {
+	width: 750px;
+	border: 1px solid black;
+	overflow: hidden;
+	background: #ccc;
+}
+.top-shadow {
+	height: 10px;
+	background: #ff0;
+	box-shadow: 0px 0px 25px #000;
+	position: relative;
+	top: -10px;
+}
+.bottom-shadow {
+	height: 10px;
+	background: #fff;
+	box-shadow: 0px 0px 25px #000;
+	position: relative;
+	top: 10px;
+}
+.inner {
+	padding: 20px 65px;
+}
+h3 {
+	font-size: 25pt;
+	font-family: 'CuriousSans-Bold', Arial, Helvetica, freesans, sans-serif;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+.date-box {
+	background: #00a030;
+	color: #fff;
+	font-size: 12pt;
+	padding: 10px;
+}
+.event-title {
+	font-size: 16pt;
+	font-weight: bold;
+	display: block;
+}
+.from {
+	font-style: italic;
+	font-size: 12pt;
+	color: #666;
+}
+
+.promo-container {
+}
+.promo {
+	vertical-align: top;
+	display: inline-block;
+	width: 190px;
+	margin-right: 10px;
+	height: 350px;
+}
+.promo .secondary {
+	display: none;
+	padding: 0 10px;
+	text-align: center;
+}
+.promo .secondary p {
+	text-align: left;
+}
+.promo .secondary .date-box {
+	display: inline-block;
+	margin-top: 5px;
+}
+.promo:hover {
+	background: #aaa;
+}
+.promo:hover .primary {
+	display: none;
+}
+.promo:hover .secondary {
+	display: block;
+}
+
+.button {
+	padding: 10px;
+	background: #fff;
+	font-size: 14pt;
+	font-weight: bold;
+	display: inline-block;
+}
+
+span.timeline-title {
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+}
+
+</style>
+</head>
+<body>
+<div id="widget">
+	<div class="top-shadow"></div>
+	<div class="inner">
+		<!-- <h3>Meanwhile...</h3> -->
+<!-- 		<h3>Meanwhile March 1981 - 16 October 1984</h3> -->
+		<h3>Elsewhere from iWonder:<br/> March 1981 - 16 October 1984</h3>
+		<div class="promo-container">
+			<div class="promo">
+				<div class="primary">
+					<p><span class="date-box">June - July 1982</span></p>
+					<img src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg" width="100%" />
+					<p><span class="event-title">Spain</span> <span class="from">from</span> <span class="timeline-title">The story of the Fifa World Cup</span></p>
+				</div>
+				<div class="secondary">
+					<span class="date-box">June - July 1982</span>
+					<p>For the 1982 tournament in Spain, the World Cup finals expanded from 16 to 24 teams. The larger finals let more teams from Africa and Asia qualify.</p>
+					<a href="javascript:alert('go to timeline...');"><img border="0" src="read-more.png" /></a>
+				</div>
+			</div>
+			<div class="promo">
+				<div class="primary">
+					<p><span class="date-box">1984</span></p>
+					<img src="http://ichef.bbci.co.uk/images/ic/640x360/p028vfb2.jpg" width="100%" />
+					<p><span class="event-title">Computer-aided design: the birth of digital creativity</span> <span class="from">from</span> <span class="timeline-title">How the world came to be run by computer code</span></p>
+				</div>
+				<div class="secondary">
+					<span class="date-box">1984</span>
+					<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
+					<a href="javascript:alert('go to timeline...');"><img border="0" src="read-more.png" /></a>
+				</div>
+			</div>
+			<div class="promo">
+				<div class="primary">
+					<p><span class="date-box">October 1984</span></p>
+					<img src="http://ichef.bbci.co.uk/images/ic/496xn/p02b2bnh.jpg" width="100%" />
+					<p><span class="event-title">Indira Gandhi</span> <span class="from">from</span> <span class="timeline-title">The Gurus and warriors of the Sikh kingdom</span></p>
+				</div>
+				<div class="secondary">
+					<span class="date-box">October 1984</span>
+					<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
+					<a href="javascript:alert('go to timeline...');"><img border="0" src="read-more.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-shadow"></div>
+</div>
+</body>
+</html>
