@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />     <!--orb.ws.require.lib--> <script type="text/javascript">/*<![CDATA[*/ if (typeof window.define !== 'function' || typeof window.require !== 'function') { document.write('<script class="js-require-lib" src="http://static.bbci.co.uk/frameworks/requirejs/lib.js"><'+'/script>'); } /*]]>*/</script> <script type="text/javascript" class="js-require-conf">  bbcRequireMap = {"jquery-1":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.7.2", "jquery-1.4":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.4", "jquery-1.9":"http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1", "swfobject-2":"http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2", "demi-1":"http://static.bbci.co.uk/frameworks/demi/0.10.0/sharedmodules/demi-1", "gelui-1":"http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1", "cssp!gelui-1/overlay":"http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1/overlay.css", "istats-1":"http://static.bbci.co.uk/frameworks/istats/0.25.1/modules/istats-1", "relay-1":"http://static.bbci.co.uk/frameworks/relay/0.2.6/sharedmodules/relay-1", "clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1", "canvas-clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/canvas-clock-1", "cssp!clock-1":"http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1.css", "jssignals-1":"http://static.bbci.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1", "jcarousel-1":"http://static.bbci.co.uk/frameworks/jcarousel/0.1.10/modules/jcarousel-1", "bump-3":"//emp.bbci.co.uk/emp/bump-3/bump-3"}; require({ baseUrl: 'http://static.bbci.co.uk/', paths: bbcRequireMap, waitSeconds: 30 }); </script>   <script type="text/javascript">/*<![CDATA[*/ if (typeof bbccookies_flag === 'undefined') { bbccookies_flag = 'ON'; } showCTA_flag = true; cta_enabled = (showCTA_flag && (bbccookies_flag === 'ON') ); (function(){var e="ckns_policy",m="Thu, 01 Jan 1970 00:00:00 GMT",k={ads:true,personalisation:true,performance:true,necessary:true};function f(p){if(f.cache[p]){return f.cache[p]}var o=p.split("/"),q=[""];do{q.unshift((o.join("/")||"/"));o.pop()}while(q[0]!=="/");f.cache[p]=q;return q}f.cache={};function a(p){if(a.cache[p]){return a.cache[p]}var q=p.split("."),o=[];while(q.length&&"|co.uk|com|".indexOf("|"+q.join(".")+"|")===-1){if(q.length){o.push(q.join("."))}q.shift()}f.cache[p]=o;return o}a.cache={};function i(o,t,p){var z=[""].concat(a(window.location.hostname)),w=f(window.location.pathname),y="",r,x;for(var s=0,v=z.length;s<v;s++){r=z[s];for(var q=0,u=w.length;q<u;q++){x=w[q];y=o+"="+t+";"+(r?"domain="+r+";":"")+(x?"path="+x+";":"")+(p?"expires="+p+";":"");bbccookies.set(y,true)}}}window.bbccookies={_setEverywhere:i,cookiesEnabled:function(){var o="ckns_testcookie"+Math.floor(Math.random()*100000);this.set(o+"=1");if(this.get().indexOf(o)>-1){g(o);return true}return false},set:function(o){return document.cookie=o},get:function(){return document.cookie},_setPolicy:function(o){return h.apply(this,arguments)},readPolicy:function(o){return b.apply(this,arguments)},_deletePolicy:function(){i(e,"",m)},isAllowed:function(){return true},_isConfirmed:function(){return c()!==null},_acceptsAll:function(){var o=b();return o&&!(j(o).indexOf("0")>-1)},_getCookieName:function(){return d.apply(this,arguments)},_showPrompt:function(){var o=(!this._isConfirmed()&&window.cta_enabled&&this.cookiesEnabled()&&!window.bbccookies_disable);return(window.orb&&window.orb.fig)?o&&(window.orb.fig("no")||window.orb.fig("ck")):o}};bbccookies._getPolicy=bbccookies.readPolicy;function d(p){var o=(""+p).match(/^([^=]+)(?==)/);return(o&&o.length?o[0]:"")}function j(o){return""+(o.ads?1:0)+(o.personalisation?1:0)+(o.performance?1:0)}function h(r){if(typeof r==="undefined"){r=k}if(typeof arguments[0]==="string"){var o=arguments[0],q=arguments[1];if(o==="necessary"){q=true}r=b();r[o]=q}else{if(typeof arguments[0]==="object"){r.necessary=true}}var p=new Date();p.setYear(p.getFullYear()+1);p=p.toUTCString();bbccookies.set(e+"="+j(r)+";domain=bbc.co.uk;path=/;expires="+p+";");bbccookies.set(e+"="+j(r)+";domain=bbc.com;path=/;expires="+p+";");return r}function l(o){if(o===null){return null}var p=o.split("");return{ads:!!+p[0],personalisation:!!+p[1],performance:!!+p[2],necessary:true}}function c(){var o=new RegExp("(?:^|; ?)"+e+"=(\\d\\d\\d)($|;)"),p=document.cookie.match(o);if(!p){return null}return p[1]}function b(o){var p=l(c());if(!p){p=k}if(o){return p[o]}else{return p}}function g(o){return document.cookie=o+"=;expires="+m+";"}function n(){var o='<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/bbccookies/0.6.6/script/bbccookies.js"><\/script>';if(window.bbccookies_flag==="ON"&&!bbccookies._acceptsAll()&&!window.bbccookies_disable){document.write(o)}}n()})(); /*]]>*/</script> <script type="text/javascript">/*<![CDATA[*/
 	(function(){window.fig=window.fig||{};window.fig.manager={include:function(a){a=a||window;var e=a.document,g=e.cookie,b=g.match(/(?:^|; ?)ckns_orb_fig=([^;]+)/);if(!b&&g.indexOf("ckns_orb_nofig=1")>-1){this.setFig(a,{no:1})}else{if(b){b=this.deserialise(decodeURIComponent(RegExp.$1));this.setFig(a,b)}e.write('<script src="https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"><'+"/script>")}},confirm:function(a){a=a||window;if(a.orb&&a.orb.fig&&a.orb.fig("no")){this.setNoFigCookie(a)}if(a.orb===undefined||a.orb.fig===undefined){this.setFig(a,{no:1});this.setNoFigCookie(a)}},setNoFigCookie:function(a){a.document.cookie="ckns_orb_nofig=1; expires="+new Date(new Date().getTime()+1000*60*10).toGMTString()+";"},setFig:function(a,b){(function(){var c=b;a.orb=a.orb||{};a.orb.fig=function(d){return(arguments.length)?c[d]:c}})()},deserialise:function(b){var a={};b.replace(/([a-z]{2}):([0-9]+)/g,function(){a[RegExp.$1]=+RegExp.$2});return a}}})();fig.manager.include();/*]]>*/</script>
-	
+
 	<!--[if (gt IE 8) | (IEMobile)]><!-->
 	<link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/style/orb.css">
 	<!--<![endif]-->
@@ -98,6 +98,142 @@ href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/palettes/colour-pale
          </header>
       </div>
       <div class="k-timeline-body">
+
+<style>
+
+
+@font-face {
+    font-family: 'CuriousSans-Bold';
+    src: url("../../font/CuriousSans-Bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: Arial;
+}
+
+#widget {
+	/*width: 750px;*/
+	overflow: hidden;
+	background: #ccc;
+}
+.top-shadow {
+	height: 10px;
+	background: #ff0;
+	box-shadow: 0px 0px 25px #000;
+	position: relative;
+	top: -10px;
+}
+.bottom-shadow {
+	height: 10px;
+	background: #fff;
+	box-shadow: 0px 0px 25px #000;
+	position: relative;
+	top: 10px;
+}
+
+
+@media only screen and (min-width: 600px) {
+	.inner {	
+		padding: 20px 65px;
+	}
+}
+
+@media only screen and (min-width: 1008px) {
+	.inner {
+		padding: 20px 160px;
+	}
+}
+
+h3 {
+	font-size: 25pt;
+	font-family: 'CuriousSans-Bold', Arial, Helvetica, freesans, sans-serif;
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+.date-box {
+	background: #00a030;
+	color: #fff;
+	font-size: 12pt;
+	padding: 10px;
+}
+.event-title {
+	font-size: 16pt;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.from {
+	font-size: 12pt;
+	color: #666;
+}
+
+.promo-container {
+}
+.promo {
+	vertical-align: top;
+	display: inline-block;
+	width: 190px;
+	margin-right: 10px;
+	height: 350px;
+}
+.promo .secondary {
+	display: none;
+	padding: 0 10px;
+	text-align: center;
+}
+.promo .secondary p {
+	text-align: left;
+
+}
+.promo .secondary .date-box {
+	display: inline-block;
+	margin-top: 5px;
+}
+.promo:hover {
+	background: #aaa;
+}
+.promo:hover .primary {
+	display: none;
+}
+.promo:hover .secondary {
+	display: block;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+}
+
+#widget .button {
+	padding: 10px;
+	background: #fff;
+	font-size: 14pt;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.widget-img {
+	margin-top: 20px;
+}
+
+.widget-title {
+	margin-bottom: 20px;
+}
+
+span.timeline-title {
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+}	
+
+</style>
+<!--          <section class="elsewhere">
+<iframe src="./sideways-journeys/meanwhile.html" style="height:470px;width:900px; border:none" scrolling="no"></iframe>
+         </section> -->
+
+
+
+
          <section id="z2wyvcw" class="with-connections k-tl-preamble">
             <div class="k-tl-preamble-body">
                <div class="k-tl-hero-additional">
@@ -285,7 +421,7 @@ href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/palettes/colour-pale
                   <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/events/republican_hunger_strikes_maze">Republican hunger strikes in the Maze prison<span></span></a>
                </div>
             </div>
-            <div class="k-tl-quote">
+<!--             <div class="k-tl-quote">
                <div class="k-tl-quote-main with-image" style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p025nwp7.jpg")' data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p025nwp7.jpg">
                   <div class="k-tl-quote-wrapper">
                      <blockquote class="k-tl-quote-content">
@@ -294,8 +430,61 @@ href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/palettes/colour-pale
                      </blockquote>
                   </div>
                </div>
-            </div>
+            </div> -->
+
+
          </section>
+
+
+<div id="widget">
+	<div class="top-shadow"></div>
+	<div class="inner">
+		<!-- <h3>Meanwhile...</h3> -->
+<!-- 		<h3>Meanwhile March 1981 - 16 October 1984</h3> -->
+		<h3 class="widget-title">March 1981 - 16 October 1984<br/>Elsewhere from iWonder </h3>
+		<div class="promo-container">
+			<div class="promo">
+				<div class="primary">
+					<p><span class="date-box">June - July 1982</span></p>
+					<img src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg" width="100%" class="widget-img"/>
+					<p><span class="event-title">Spain</span> <span class="from">from</span> <span class="timeline-title">The story of the Fifa World Cup</span></p>
+				</div>
+				<div class="secondary">
+					<span class="date-box">June - July 1982</span>
+					<p>For the 1982 tournament in Spain, the World Cup finals expanded from 16 to 24 teams. The larger finals let more teams from Africa and Asia qualify.</p>
+					<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
+				</div>
+			</div>
+			<div class="promo">
+				<div class="primary">
+					<p><span class="date-box">1984</span></p>
+					<img src="http://ichef.bbci.co.uk/images/ic/640x360/p028vfb2.jpg" width="100%" class="widget-img"/>
+					<p><span class="event-title">Computer-aided design: the birth of digital creativity</span> <span class="from">from</span> <span class="timeline-title">How the world came to be run by computer code</span></p>
+				</div>
+				<div class="secondary">
+					<span class="date-box">1984</span>
+					<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
+					<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
+				</div>
+			</div>
+			<div class="promo">
+				<div class="primary">
+					<p><span class="date-box">October 1984</span></p>
+					<img src="http://ichef.bbci.co.uk/images/ic/496xn/p02b2bnh.jpg" width="100%" class="widget-img"/>
+					<p><span class="event-title">Indira Gandhi</span> <span class="from">from</span> <span class="timeline-title">The Gurus and warriors of the Sikh kingdom</span></p>
+				</div>
+				<div class="secondary">
+					<span class="date-box">October 1984</span>
+					<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
+					<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-shadow"></div>
+</div>
+
+
          <section id="z9x49j6" class="k-tl-event even event-8">
             <div class="k-tl-event-panel no-media">
                <h2 class="k-tl-event-date-description"><span>16 October 1984</span></h2>
@@ -319,6 +508,8 @@ href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/palettes/colour-pale
                   <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/uk-northern-ireland-25576164">IRA Brighton bomb slowed British-Irish peace talks<span></span></a>
                </div>
             </div>
+
+
             <div class="k-tl-quote">
                <div class="k-tl-quote-main with-image" style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p025nstv.jpg")' data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p025nstv.jpg">
                   <div class="k-tl-quote-wrapper">
@@ -570,33 +761,33 @@ href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/palettes/colour-pale
 				else if ( host.match(/^pal\.sandbox\./i) ) {
 					url += 'test.';
 				}
-				
+
 				theme = themes[ +(theme === themes[0]) ];
-				
+
 				return url + 'bbc.co.uk/navpromo/' + variant + '/' + theme;
 			},
 			validSegment: function (segment) {
 				var validSegments = this.segments;
-				
+
 				for (var i = 0, len = validSegments.length; i < len; i++) {
 					if (validSegments[i] === segment) {
 						return segment;
 					}
 				}
-				
+
 				return validSegments[0];
 			},
 			init: function(node) {
 				var disabledByCookie = (document.cookie.indexOf('ckns_orb_nopromo=1') > -1),
 				orbFullWidth     = (document.getElementById('orb-aside').offsetWidth >= 1008),
 				that = this;
-				
+
 				if (window.promomanagerOverride) {
 					for (var p in promomanagerOverride) {
 						that[p] = promomanagerOverride[p];
 					}
 				}
-				
+
 				if ( window.orb.fig('uk') && orbFullWidth && !disabledByCookie ) {
 					require(['orb/async/_footerpromo', 'istats-1'], function(promo, istats) {
 						var mandolinEndDate = new Date().getTime() + (7 * 60 * 60 * 24) * 1000,
