@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--orb.ws.require.lib-->
+    <script type="text/javascript">/*<![CDATA[*/
+    if (typeof window.define !== 'function' || typeof window.require !== 'function') {
+        document.write('<script class="js-require-lib" src="http://static.bbci.co.uk/frameworks/requirejs/lib.js"><' + '/script>');
+    }
+    /*]]>*/</script>
+    <script type="text/javascript"
+            class="js-require-conf">  bbcRequireMap = {"jquery-1": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.7.2", "jquery-1.4": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.4", "jquery-1.9": "http://static.bbci.co.uk/frameworks/jquery/0.3.0/sharedmodules/jquery-1.9.1", "swfobject-2": "http://static.bbci.co.uk/frameworks/swfobject/0.1.10/sharedmodules/swfobject-2", "demi-1": "http://static.bbci.co.uk/frameworks/demi/0.10.0/sharedmodules/demi-1", "gelui-1": "http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1", "cssp!gelui-1/overlay": "http://static.bbci.co.uk/frameworks/gelui/0.9.13/sharedmodules/gelui-1/overlay.css", "istats-1": "http://static.bbci.co.uk/frameworks/istats/0.25.1/modules/istats-1", "relay-1": "http://static.bbci.co.uk/frameworks/relay/0.2.6/sharedmodules/relay-1", "clock-1": "http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1", "canvas-clock-1": "http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/canvas-clock-1", "cssp!clock-1": "http://static.bbci.co.uk/frameworks/clock/0.1.9/sharedmodules/clock-1.css", "jssignals-1": "http://static.bbci.co.uk/frameworks/jssignals/0.3.6/modules/jssignals-1", "jcarousel-1": "http://static.bbci.co.uk/frameworks/jcarousel/0.1.10/modules/jcarousel-1", "bump-3": "//emp.bbci.co.uk/emp/bump-3/bump-3"};
+    require({ baseUrl: 'http://static.bbci.co.uk/', paths: bbcRequireMap, waitSeconds: 30 }); </script>
+    <script type="text/javascript">/*<![CDATA[*/
+    if (typeof bbccookies_flag === 'undefined') {
+        bbccookies_flag = 'ON';
+    }
+    showCTA_flag = true;
+    cta_enabled = (showCTA_flag && (bbccookies_flag === 'ON') );
+    (function () {
+        var e = "ckns_policy", m = "Thu, 01 Jan 1970 00:00:00 GMT", k = {ads: true, personalisation: true, performance: true, necessary: true};
+
+        function f(p) {
+            if (f.cache[p]) {
+                return f.cache[p]
+            }
+            var o = p.split("/"), q = [""];
+            do {
+                q.unshift((o.join("/") || "/"));
+                o.pop()
+            } while (q[0] !== "/");
+            f.cache[p] = q;
+            return q
+        }
+
+        f.cache = {};
+        function a(p) {
+            if (a.cache[p]) {
+                return a.cache[p]
+            }
+            var q = p.split("."), o = [];
+            while (q.length && "|co.uk|com|".indexOf("|" + q.join(".") + "|") === -1) {
+                if (q.length) {
+                    o.push(q.join("."))
+                }
+                q.shift()
+            }
+            f.cache[p] = o;
+            return o
+        }
+
+        a.cache = {};
+        function i(o, t, p) {
+            var z = [""].concat(a(window.location.hostname)), w = f(window.location.pathname), y = "", r, x;
+            for (var s = 0, v = z.length; s < v; s++) {
+                r = z[s];
+                for (var q = 0, u = w.length; q < u; q++) {
+                    x = w[q];
+                    y = o + "=" + t + ";" + (r ? "domain=" + r + ";" : "") + (x ? "path=" + x + ";" : "") + (p ? "expires=" + p + ";" : "");
+                    bbccookies.set(y, true)
+                }
+            }
+        }
+
+        window.bbccookies = {_setEverywhere: i, cookiesEnabled: function () {
+            var o = "ckns_testcookie" + Math.floor(Math.random() * 100000);
+            this.set(o + "=1");
+            if (this.get().indexOf(o) > -1) {
+                g(o);
+                return true
+            }
+            return false
+        }, set: function (o) {
+            return document.cookie = o
+        }, get: function () {
+            return document.cookie
+        }, _setPolicy: function (o) {
+            return h.apply(this, arguments)
+        }, readPolicy: function (o) {
+            return b.apply(this, arguments)
+        }, _deletePolicy: function () {
+            i(e, "", m)
+        }, isAllowed: function () {
+            return true
+        }, _isConfirmed: function () {
+            return c() !== null
+        }, _acceptsAll: function () {
+            var o = b();
+            return o && !(j(o).indexOf("0") > -1)
+        }, _getCookieName: function () {
+            return d.apply(this, arguments)
+        }, _showPrompt: function () {
+            var o = (!this._isConfirmed() && window.cta_enabled && this.cookiesEnabled() && !window.bbccookies_disable);
+            return(window.orb && window.orb.fig) ? o && (window.orb.fig("no") || window.orb.fig("ck")) : o
+        }};
+        bbccookies._getPolicy = bbccookies.readPolicy;
+        function d(p) {
+            var o = ("" + p).match(/^([^=]+)(?==)/);
+            return(o && o.length ? o[0] : "")
+        }
+
+        function j(o) {
+            return"" + (o.ads ? 1 : 0) + (o.personalisation ? 1 : 0) + (o.performance ? 1 : 0)
+        }
+
+        function h(r) {
+            if (typeof r === "undefined") {
+                r = k
+            }
+            if (typeof arguments[0] === "string") {
+                var o = arguments[0], q = arguments[1];
+                if (o === "necessary") {
+                    q = true
+                }
+                r = b();
+                r[o] = q
+            } else {
+                if (typeof arguments[0] === "object") {
+                    r.necessary = true
+                }
+            }
+            var p = new Date();
+            p.setYear(p.getFullYear() + 1);
+            p = p.toUTCString();
+            bbccookies.set(e + "=" + j(r) + ";domain=bbc.co.uk;path=/;expires=" + p + ";");
+            bbccookies.set(e + "=" + j(r) + ";domain=bbc.com;path=/;expires=" + p + ";");
+            return r
+        }
+
+        function l(o) {
+            if (o === null) {
+                return null
+            }
+            var p = o.split("");
+            return{ads: !!+p[0], personalisation: !!+p[1], performance: !!+p[2], necessary: true}
+        }
+
+        function c() {
+            var o = new RegExp("(?:^|; ?)" + e + "=(\\d\\d\\d)($|;)"), p = document.cookie.match(o);
+            if (!p) {
+                return null
+            }
+            return p[1]
+        }
+
+        function b(o) {
+            var p = l(c());
+            if (!p) {
+                p = k
+            }
+            if (o) {
+                return p[o]
+            } else {
+                return p
+            }
+        }
+
+        function g(o) {
+            return document.cookie = o + "=;expires=" + m + ";"
+        }
+
+        function n() {
+            var o = '<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/bbccookies/0.6.6/script/bbccookies.js"><\/script>';
+            if (window.bbccookies_flag === "ON" && !bbccookies._acceptsAll() && !window.bbccookies_disable) {
+                document.write(o)
+            }
+        }
+
+        n()
+    })();
+    /*]]>*/</script>
+    <script type="text/javascript">/*<![CDATA[*/
+    (function () {
+        window.fig = window.fig || {};
+        window.fig.manager = {include: function (a) {
+            a = a || window;
+            var e = a.document, g = e.cookie, b = g.match(/(?:^|; ?)ckns_orb_fig=([^;]+)/);
+            if (!b && g.indexOf("ckns_orb_nofig=1") > -1) {
+                this.setFig(a, {no: 1})
+            } else {
+                if (b) {
+                    b = this.deserialise(decodeURIComponent(RegExp.$1));
+                    this.setFig(a, b)
+                }
+                e.write('<script src="https://ssl.bbc.co.uk/frameworks/fig/1/fig.js"><' + "/script>")
+            }
+        }, confirm: function (a) {
+            a = a || window;
+            if (a.orb && a.orb.fig && a.orb.fig("no")) {
+                this.setNoFigCookie(a)
+            }
+            if (a.orb === undefined || a.orb.fig === undefined) {
+                this.setFig(a, {no: 1});
+                this.setNoFigCookie(a)
+            }
+        }, setNoFigCookie: function (a) {
+            a.document.cookie = "ckns_orb_nofig=1; expires=" + new Date(new Date().getTime() + 1000 * 60 * 10).toGMTString() + ";"
+        }, setFig: function (a, b) {
+            (function () {
+                var c = b;
+                a.orb = a.orb || {};
+                a.orb.fig = function (d) {
+                    return(arguments.length) ? c[d] : c
+                }
+            })()
+        }, deserialise: function (b) {
+            var a = {};
+            b.replace(/([a-z]{2}):([0-9]+)/g, function () {
+                a[RegExp.$1] = +RegExp.$2
+            });
+            return a
+        }}
+    })();
+    fig.manager.include();
+    /*]]>*/</script>
+
+    <!--[if (gt IE 8) | (IEMobile)]><!-->
+    <link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/style/orb.css">
+    <!--<![endif]-->
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel="stylesheet" href="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/style/orb-ie.css">
+    <![endif]-->
+
+    <script type="text/javascript">/*<![CDATA[*/
+    (function (undefined) {
+        if (!window.bbc) {
+            window.bbc = {}
+        }
+        var ROLLING_PERIOD_DAYS = 30;
+        window.bbc.Mandolin = function (id, segments, opts) {
+            var now = new Date().getTime(), storedItem, DEFAULT_START = now, DEFAULT_RATE = 1, COOKIE_NAME = "ckpf_mandolin";
+            opts = opts || {};
+            this._id = id;
+            this._segmentSet = segments;
+            this._store = new window.window.bbc.Mandolin.Storage(COOKIE_NAME);
+            this._opts = opts;
+            this._rate = (opts.rate !== undefined) ? +opts.rate : DEFAULT_RATE;
+            this._startTs = (opts.start !== undefined) ? new Date(opts.start).getTime() : new Date(DEFAULT_START).getTime();
+            this._endTs = (opts.end !== undefined) ? new Date(opts.end).getTime() : daysFromNow(ROLLING_PERIOD_DAYS);
+            this._signupEndTs = (opts.signupEnd !== undefined) ? new Date(opts.signupEnd).getTime() : this._endTs;
+            this._segment = null;
+            if (typeof id !== "string") {
+                throw new Error("Invalid Argument: id must be defined and be a string")
+            }
+            if (Object.prototype.toString.call(segments) !== "[object Array]") {
+                throw new Error("Invalid Argument: Segments are required.")
+            }
+            if (opts.rate !== undefined && (opts.rate < 0 || opts.rate > 1)) {
+                throw new Error("Invalid Argument: Rate must be between 0 and 1.")
+            }
+            if (this._startTs > this._endTs) {
+                throw new Error("Invalid Argument: end date must occur after start date.")
+            }
+            if (!(this._startTs < this._signupEndTs && this._signupEndTs <= this._endTs)) {
+                throw new Error("Invalid Argument: SignupEnd must be between start and end date")
+            }
+            removeExpired.call(this, now);
+            var overrides = window.bbccookies.get().match(/ckns_mandolin_setSegments=([^;]+)/);
+            if (overrides !== null) {
+                eval("overrides = " + decodeURIComponent(RegExp.$1) + ";");
+                if (overrides[this._id] && this._segmentSet.indexOf(overrides[this._id]) == -1) {
+                    throw new Error("Invalid Override: overridden segment should exist in segments array")
+                }
+            }
+            if (overrides !== null && overrides[this._id]) {
+                this._segment = overrides[this._id]
+            } else {
+                if ((storedItem = this._store.getItem(this._id))) {
+                    this._segment = storedItem.segment
+                } else {
+                    if (this._startTs <= now && now < this._signupEndTs && now <= this._endTs && this._store.isEnabled() === true) {
+                        this._segment = pick(segments, this._rate);
+                        if (opts.end === undefined) {
+                            this._store.setItem(this._id, {segment: this._segment})
+                        } else {
+                            this._store.setItem(this._id, {segment: this._segment, end: this._endTs})
+                        }
+                        log.call(this, "mandolin_segment")
+                    }
+                }
+            }
+            log.call(this, "mandolin_view")
+        };
+        window.bbc.Mandolin.prototype.getSegment = function () {
+            return this._segment
+        };
+        function log(actionType, params) {
+            var that = this;
+            require(["istats-1"], function (istats) {
+                istats.log(actionType, that._id + ":" + that._segment, params ? params : {})
+            })
+        }
+
+        function removeExpired(expires) {
+            var items = this._store.getItems(), expiresInt = +expires;
+            for (var key in items) {
+                if (items[key].end !== undefined && +items[key].end < expiresInt) {
+                    this._store.removeItem(key)
+                }
+            }
+        }
+
+        function getLastExpirationDate(data) {
+            var winner = 0, rollingExpire = daysFromNow(ROLLING_PERIOD_DAYS);
+            for (var key in data) {
+                if (data[key].end === undefined && rollingExpire > winner) {
+                    winner = rollingExpire
+                } else {
+                    if (+data[key].end > winner) {
+                        winner = +data[key].end
+                    }
+                }
+            }
+            return(winner) ? new Date(winner) : new Date(rollingExpire)
+        }
+
+        window.bbc.Mandolin.prototype.log = function (params) {
+            log.call(this, "mandolin_log", params)
+        };
+        window.bbc.Mandolin.prototype.convert = function (params) {
+            log.call(this, "mandolin_convert", params);
+            this.convert = function () {
+            }
+        };
+        function daysFromNow(n) {
+            var endDate;
+            endDate = new Date().getTime() + (n * 60 * 60 * 24) * 1000;
+            return endDate
+        }
+
+        function pick(segments, rate) {
+            var picked, min = 0, max = segments.length - 1;
+            if (typeof rate === "number" && Math.random() > rate) {
+                return null
+            }
+            do {
+                picked = Math.floor(Math.random() * (max - min + 1)) + min
+            } while (picked > max);
+            return segments[picked]
+        }
+
+        window.bbc.Mandolin.Storage = function (name) {
+            validateCookieName(name);
+            this._cookieName = name;
+            this._isEnabled = (bbccookies.isAllowed(this._cookieName) === true && bbccookies.cookiesEnabled() === true)
+        };
+        window.bbc.Mandolin.Storage.prototype.setItem = function (key, value) {
+            var storeData = this.getItems();
+            storeData[key] = value;
+            this.save(storeData);
+            return value
+        };
+        window.bbc.Mandolin.Storage.prototype.isEnabled = function () {
+            return this._isEnabled
+        };
+        window.bbc.Mandolin.Storage.prototype.getItem = function (key) {
+            var storeData = this.getItems();
+            return storeData[key]
+        };
+        window.bbc.Mandolin.Storage.prototype.removeItem = function (key) {
+            var storeData = this.getItems();
+            delete storeData[key];
+            this.save(storeData)
+        };
+        window.bbc.Mandolin.Storage.prototype.getItems = function () {
+            return deserialise(this.readCookie(this._cookieName) || "")
+        };
+        window.bbc.Mandolin.Storage.prototype.save = function (data) {
+            window.bbccookies.set(this._cookieName + "=" + encodeURIComponent(serialise(data)) + "; expires=" + getLastExpirationDate(data).toUTCString() + ";")
+        };
+        window.bbc.Mandolin.Storage.prototype.readCookie = function (name) {
+            var nameEq = name + "=", ca = window.bbccookies.get().split("; "), i, c;
+            validateCookieName(name);
+            for (i = 0; i < ca.length; i++) {
+                c = ca[i];
+                if (c.indexOf(nameEq) === 0) {
+                    return decodeURIComponent(c.substring(nameEq.length, c.length))
+                }
+            }
+            return null
+        };
+        function serialise(o) {
+            var str = "";
+            for (var p in o) {
+                if (o.hasOwnProperty(p)) {
+                    str += '"' + p + '"' + ":" + (typeof o[p] === "object" ? (o[p] === null ? "null" : "{" + serialise(o[p]) + "}") : '"' + o[p].toString() + '"') + ","
+                }
+            }
+            return str.replace(/,\}/g, "}").replace(/,$/g, "")
+        }
+
+        function deserialise(str) {
+            var o;
+            str = "{" + str + "}";
+            if (!validateSerialisation(str)) {
+                throw"Invalid input provided for deserialisation."
+            }
+            eval("o = " + str);
+            return o
+        }
+
+        var validateSerialisation = (function () {
+            var OBJECT_TOKEN = "<Object>", ESCAPED_CHAR = '"\\n\\r\\u2028\\u2029\\u000A\\u000D\\u005C', ALLOWED_CHAR = "([^" + ESCAPED_CHAR + "]|\\\\[" + ESCAPED_CHAR + "])", KEY = '"' + ALLOWED_CHAR + '+"', VALUE = '(null|"' + ALLOWED_CHAR + '*"|' + OBJECT_TOKEN + ")", KEY_VALUE = KEY + ":" + VALUE, KEY_VALUE_SEQUENCE = "(" + KEY_VALUE + ",)*" + KEY_VALUE, OBJECT_LITERAL = "({}|{" + KEY_VALUE_SEQUENCE + "})", objectPattern = new RegExp(OBJECT_LITERAL, "g");
+            return function (str) {
+                if (str.indexOf(OBJECT_TOKEN) !== -1) {
+                    return false
+                }
+                while (str.match(objectPattern)) {
+                    str = str.replace(objectPattern, OBJECT_TOKEN)
+                }
+                return str === OBJECT_TOKEN
+            }
+        })();
+
+        function validateCookieName(name) {
+            if (name.match(/ ,;/)) {
+                throw"Illegal name provided, must be valid in browser cookie."
+            }
+        }
+    })();
+    /*]]>*/</script>
+    <script type="text/javascript">  document.documentElement.className += (document.documentElement.className ? ' ' : '') + 'orb-js';
+    fig.manager.confirm(); </script>
+    <script src="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/script/orb/api.min.js"></script>
+    <script type="text/javascript"> window.orb_masthead_test = new bbc.Mandolin('orb_masthead', ['simple', 'control'], { rate: 6 / 1000, start: new Date('09/22/2014 08:00:00 GMT'), /* format: mm/dd/yyyy hh:mm:ss */ signupEnd: new Date('09/24/2014 08:00:00 GMT'), end: new Date('10/06/2014 08:00:00 GMT') }); </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    function oqsSurveyManager(w, flag) {
+        if (flag !== 'OFF') {
+            w.document.write('<script type="text/javascript" src="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/script/vendor/edr.js"><' + '/script>');
+        }
+    }
+    oqsSurveyManager(window, 'ON');
+    /*]]>*/ </script>
+    <script type="text/javascript"> /* <![CDATA[ */
+    define('id-statusbar-config', { 'translation_signedout': "Sign in", 'translation_signedin': "Your account", 'use_overlay': false, 'signin_url': "https://ssl.bbc.co.uk/id/signin", 'locale': "en-GB", 'policyname': "", 'ptrt': "http://www.bbc.co.uk/" });
+    /* ]]> */ </script>
+    <script type="text/javascript"> (function () {
+        if (!window.require) {
+            throw new Error('idcta: could not find require');
+        }
+        var map = {};
+        map['idapp-1'] = 'http://static.bbci.co.uk/idapp/0.63.26/modules/idapp/idapp-1';
+        map['idcta/idcta-1'] = 'http://static.bbci.co.uk/id/0.24.7/modules/idcta/idcta-1';
+        map['idcta/idCookie'] = 'http://static.bbci.co.uk/id/0.24.7/modules/idcta/idCookie';
+        map['idcta/overlayManager'] = 'http://static.bbci.co.uk/id/0.24.7/modules/idcta/overlayManager';
+        require({paths: map});
+        define('id-config', {"idapp": {"version": "0.63.26", "hostname": "ssl.bbc.co.uk", "insecurehostname": "www.bbc.co.uk", "tld": "bbc.co.uk"}, "idtranslations": {"version": "0.29.1"}, "identity": {"baseUrl": "https:\/\/talkback.live.bbc.co.uk\/identity"}, "pathway": {"name": null, "staticAssetUrl": "http:\/\/static.bbci.co.uk\/idapp\/0.63.26\/modules\/idapp\/idapp-1\/View.css"}});
+    })(); </script>
+    <script type="text/javascript">/*<![CDATA[*/
+    window.istats = (window.istats || {});
+    (istats.head = function (w, d) {
+        w.istats._linkTracked = w.istats._trackingCookie = decodeURIComponent((d.cookie.match(/\bsa_labels=([^;]+)/) || []).pop() || '');
+        var host = w.location.host, m = host.match(/(bbc(?:\.co\.uk|\.com))$/i);
+        d.cookie = 'sa_labels=; expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=' + (m ? m[1] : host) + '; path=/';
+    })(window, document);
+    /*]]>*/</script>
+    <!-- BBCDOTCOM template: responsive webservice  -->
+    <!-- BBCDOTCOM head -->
+    <script type="text/javascript"> /*<![CDATA[*/
+    var _sf_startpt = (new Date()).getTime();
+    /*]]>*/ </script>
+    <style type="text/css">.bbccom_display_none {
+        display: none;
+    }</style>
+    <script type="text/javascript"> /*<![CDATA[*/
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    var bbcdotcom = false;
+    (function () {
+        if (typeof require !== 'undefined') {
+            require({ paths: { "bbcdotcom": "http://static.bbci.co.uk/bbcdotcom/0.3.299/script" } });
+        }
+    })();
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    var bbcdotcom = { adverts: {}, advert: { write: function () {
+    }, show: function () {
+    }, isActive: function () {
+        return false;
+    }, layout: function () {
+        return { reset: function () {
+        } }
+    } }, config: { init: function () {
+    }, isActive: function () {
+    }, setSections: function () {
+    }, isAdsEnabled: function () {
+    }, setAdsEnabled: function () {
+    }, isAnalyticsEnabled: function () {
+    }, setAssetPrefix: function () {
+    }, setConfig: function () {
+    } }, survey: { init: function () {
+        return false;
+    } }, data: {}, init: function () {
+    }, objects: function (str) {
+        return false;
+    }, locale: { set: function () {
+    } }, setAdKeyValue: function () {
+    }, utils: { addEvent: function () {
+    }, addHtmlTagClass: function () {
+    } }, addLoadEvent: function () {
+    } };
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (typeof orb !== 'undefined' && typeof orb.fig === 'function') {
+        if (orb.fig('ad') && orb.fig('uk') == 0) {
+            bbcdotcom.data = { ads: (orb.fig('ad') ? 1 : 0), stats: (orb.fig('uk') == 0 ? 1 : 0), statsProvider: orb.fig('ap') };
+        }
+    } else {
+        document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://ssl.bbc.com' : 'http://tps.bbc.com') + '/wwscripts/data">\x3C/script>');
+    }
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (typeof orb === 'undefined' || typeof orb.fig !== 'function') {
+        bbcdotcom.data = { ads: bbcdotcom.data.a, stats: bbcdotcom.data.b, statsProvider: bbcdotcom.data.c };
+    }
+    if (bbcdotcom.data.ads == 1) {
+        document.write('<script type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://ssl.bbc.co.uk' : 'http://www.bbc.co.uk') + '/wwscripts/flag">\x3C/script>');
+    }
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && (typeof bbcdotcom.flag == 'undefined' || (typeof bbcdotcom.data.ads !== 'undefined' && bbcdotcom.flag.a != 1))) {
+        bbcdotcom.data.ads = 0;
+    }
+    if (/[?|&]ads-debug/.test(window.location.href) || document.cookie.indexOf('ads-debug') !== -1) {
+        bbcdotcom.data.ads = 1;
+        bbcdotcom.data.stats = 1;
+    }
+    if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) {
+        bbcdotcom.assetPrefix = "http://static.bbci.co.uk/bbcdotcom/0.3.299/";
+        document.write('<link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/bbcdotcom/0.3.299/style/orb/bbccom.css" />');
+        (function () {
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '">\x3C/script>');
+        })();
+        if (typeof navigator !== 'undefined' && typeof navigator.userAgent !== 'undefined' && navigator.userAgent.indexOf('MSIE 7.0') !== -1) {
+            document.write('<link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/bbcdotcom/0.3.299/style/orb/bbccom-ie7.css" />');
+        }
+        if (/(sandbox|int)(.dev)*.bbc.co*/.test(window.location.href) || /[?|&]ads-debug/.test(window.location.href)) {
+            document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/0.3.299/script/orb/individual.js">\x3C/script>');
+        } else {
+            document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/0.3.299/script/orb/bbcdotcom.js">\x3C/script>');
+        }
+        if (/[\\?&]ads=([^&#]*)/.test(window.location.href)) {
+            document.write('<script type="text/javascript" src="http://static.bbci.co.uk/bbcdotcom/0.3.299/script/orb/adverts/adSuites.js">\x3C/script>');
+        }
+    }
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && (bbcdotcom.data.ads == 1 || bbcdotcom.data.stats == 1)) {
+        var bbcdotcomConfig = {"adExclusions": "", "adFormat": "standard", "adKeyword": "", "adMode": "smart", "adsEnabled": true, "appAnalyticsSections": "", "asyncEnabled": false, "disableInitialLoad": false, "advertInfoPageUrl": "http:\/\/www.bbc.co.uk\/faqs\/online\/adverts_general", "advertisementText": "Advertisement", "analyticsEnabled": true, "appName": "barlesque", "assetPrefix": "http:\/\/static.bbci.co.uk\/bbcdotcom\/0.3.299\/", "customAdParams": [], "customStatsParams": [], "headline": "", "id": "", "inAssociationWithText": "In association with", "keywords": "", "language": "", "orbTransitional": false, "outbrainEnabled": true, "palEnv": "live", "productName": "", "sections": [], "siteCatalystEnabled": true, "slots": "", "sponsoredByText": "Sponsored by", "summary": "", "type": "", "staticBase": "\/bbcdotcom", "staticHost": "http:\/\/static.bbci.co.uk", "staticVersion": "0.3.299", "staticPrefix": "http:\/\/static.bbci.co.uk\/bbcdotcom\/0.3.299", "dataHttp": "tps.bbc.com", "dataHttps": "ssl.bbc.com", "flagHttp": "www.bbc.co.uk", "flagHttps": "ssl.bbc.co.uk", "analyticsHttp": "sa.bbc.com", "analyticsHttps": "ssa.bbc.com"};
+        bbcdotcom.config.init(bbcdotcomConfig, bbcdotcom.data, window.location, window.document);
+        bbcdotcom.config.setAssetPrefix("http://static.bbci.co.uk/bbcdotcom/0.3.299/");
+        document.write('<!--[if IE 7]><script type="text/javascript">bbcdotcom.config.setIE7(true);\x3C/script><![endif]-->');
+        document.write('<!--[if IE 8]><script type="text/javascript">bbcdotcom.config.setIE8(true);\x3C/script><![endif]-->');
+    }
+    /*]]>*/ </script>
+    <link rel="stylesheet" type="text/css"
+          href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/palettes/colour-palette-6.css">
+    <link rel="stylesheet" type="text/css" href="extra.css">
+
+
+    <!--[if lt IE 9]>
+    <link href="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/css/ie8/colour-palette-6.css"
+          media="screen" rel="stylesheet" type="text/css"/>
+    <script src="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/js/vendors/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if gt IE 9]> -->
+    <script>
+        if (document.domain.indexOf('bbc.co.uk') > -1) {
+            document.domain = 'bbc.co.uk';
+        }
+    </script>
+    <!-- <![endif]-->
+
+
+    <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+    <meta name="description"
+          content="From two minutes' silence, to the cenotaph, to Remembrance Day, remembering Britain's war dead is a living part of British identity. Has it changed since WW1?">
+    <meta name="DCTERMS.created" content="2014-11-08">
+    <meta name="DCTERMS.modified" content="2014-11-28">
+    <meta name="DCTERMS.temporal" content="name=100 years of remembrance: 1914-2014; start=1914-08-04; end=2014-11-09;">
+
+    <meta property="og:title" content="100 years of remembrance: 1914-2014">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="BBC Timelines">
+    <meta property="og:image" content="http://ichef.bbci.co.uk/images/ic/288x162/p02b8y24.jpg">
+    <meta property="og:url" content="http://www.bbc.co.uk/timelines/z229kqt">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="100 years of remembrance: 1914-2014">
+    <meta name="twitter:description"
+          content="From two minutes' silence, to the cenotaph, to Remembrance Day, remembering Britain's war dead is a living part of British identity. Has it changed since WW1?">
+    <meta name="twitter:image:src" content="http://ichef.bbci.co.uk/images/ic/288x162/p02b8y24.jpg">
+    <meta name="twitter:site" content="@BBCiWonder">
+
+    <title>BBC - iWonder - 100 years of remembrance: 1914-2014</title>
+</head>
+<body>
+<!-- BBCDOTCOM bodyFirst -->
+<div id="bbccom_interstitial" class="bbccom_display_none">
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) {
+        googletag.cmd.push(function () {
+            googletag.display('bbccom_interstitial');
+        });
+    }
+    /*]]>*/ </script>
+</div>
+<div id="bbccom_wallpaper" class="bbccom_display_none">
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) {
+        if (bbcdotcom.config.isAsync()) {
+            googletag.cmd.push(function () {
+                googletag.display('bbccom_wallpaper');
+            });
+        } else {
+            googletag.display("wallpaper");
+        }
+    }
+    /*]]>*/ </script>
+</div>
+<script type="text/javascript"> /*<![CDATA[*/
+if (window.bbcdotcom && bbcdotcom.config.isActive('ads')) {
+    document.write(unescape('%3Cscript id="gnlAdsEnabled" class="bbccom_display_none"%3E%3C/script%3E'));
+}
+if (window.bbcdotcom && bbcdotcom.config.isActive('analytics')) {
+    document.write(unescape('%3Cscript id="gnlAnalyticsEnabled" class="bbccom_display_none"%3E%3C/script%3E'));
+}
+/*]]>*/ </script>
+<div id="blq-global">
+    <div id="blq-pre-mast"></div>
+</div>
+<script type="text/html" id="blq-bbccookies-tmpl"><![CDATA[
+<section>
+    <div id="bbccookies" class="bbccookies-banner orb-banner-wrapper bbccookies-d">
+        <div id="bbccookies-prompt" class="orb-banner b-g-p b-r b-f"><h2 class="orb-banner-title"> Cookies on the BBC
+            website </h2>
+
+            <p class="orb-banner-content" dir="ltr"> We use cookies to ensure that we give you the best experience on
+                our website.<span class="bbccookies-international-message"> We also use cookies to ensure we show you advertising that is relevant to you.</span>
+                If you continue without changing your settings, we'll assume that you are happy to receive all cookies
+                on the BBC website. However, if you would like to, you can change your cookie settings at any time. </p>
+            <ul class="orb-banner-options">
+                <li id="bbccookies-continue">
+                    <button type="button" id="bbccookies-continue-button">Continue</button>
+                </li>
+                <li id="bbccookies-settings"><a href="/privacy/cookies/managing/cookie-settings.html">Change
+                    settings</a></li>
+                <li id="bbccookies-more"><a href="/privacy/cookies/bbc">Find out more</a></li>
+            </ul>
+        </div>
+    </div>
+</section> ]]></script>
+<script type="text/javascript">/*<![CDATA[*/
+(function () {
+    if (bbccookies._showPrompt()) {
+        var g = document, b = g.getElementById("blq-pre-mast"), e = g.getElementById("blq-bbccookies-tmpl"), a, f;
+        if (b && g.createElement) {
+            a = g.createElement("div");
+            f = e.innerHTML;
+            f = f.replace("<" + "![CDATA[", "").replace("]]" + ">", "");
+            a.innerHTML = f;
+            b.appendChild(a);
+            blqCookieContinueButton = g.getElementById("bbccookies-continue-button");
+            blqCookieContinueButton.onclick = function () {
+                a.parentNode.removeChild(a);
+                return false
+            };
+            bbccookies._setPolicy()
+        }
+        var c = g.getElementById("bbccookies");
+        if (c && !window.orb.fig("uk")) {
+            c.className = c.className.replace(/\bbbccookies-d\b/, "");
+            c.className = c.className + (" bbccookies-w")
+        }
+    }
+})();
+/*]]>*/</script>
+<script type="text/javascript">/*<![CDATA[*/
+bbcFlagpoles_istats = 'ON';
+istatsTrackingUrl = '//sa.bbc.co.uk/bbc/bbc/s?name=kl.iwonder.timelines.100_years_of_remembrance_1914_2014.z229kqt.page&pal_route=webserviceapi&ml_name=barlesque&app_type=responsive&language=en-GB&ml_version=0.25.1&pal_webapp=barlesque&prod_name=frameworks&app_name=frameworks';
+if (window.istats_countername) {
+    istatsTrackingUrl = istatsTrackingUrl.replace(/([?&]name=)[^&]+/ig, '$1' + istats_countername);
+}
+(function () {
+    if (/\bIDENTITY=/.test(document.cookie)) {
+        istatsTrackingUrl += '&bbc_identity=1';
+    }
+    var c = (document.cookie.match(/\bckns_policy=(\d\d\d)/) || []).pop() || '';
+    istatsTrackingUrl += '&bbc_mc=' + (c ? 'ad' + c.charAt(0) + 'ps' + c.charAt(1) + 'pf' + c.charAt(2) : 'not_set');
+    if (/\bckns_policy=\d\d0/.test(document.cookie)) {
+        istatsTrackingUrl += '&ns_nc=1';
+    }
+    var screenWidthAndHeight = 'unavailable';
+    if (window.screen && screen.width && screen.height) {
+        screenWidthAndHeight = screen.width + 'x' + screen.height;
+    }
+    istatsTrackingUrl += ('&screen_resolution=' + screenWidthAndHeight);
+    istatsTrackingUrl += '&blq_s=4d&blq_r=2.7&blq_v=default&blq_e=pal';
+})();
+/*]]>*/</script>
+<!-- Begin iStats 20100118 (UX-CMC 1.1009.3) -->
+<script type="text/javascript">/*<![CDATA[*/
+(function () {
+    window.istats || (istats = {});
+    var cookieDisabled = (document.cookie.indexOf('NO-SA=') != -1), hasCookieLabels = (document.cookie.indexOf('sa_labels=') != -1), hasClickThrough = /^#sa-(.*?)(?:-sa(.*))?$/.test(document.location.hash), runSitestat = !cookieDisabled && !hasCookieLabels && !hasClickThrough && !istats._linkTracked;
+    if (runSitestat && bbcFlagpoles_istats === 'ON') {
+        sitestat(istatsTrackingUrl);
+    } else {
+        window.ns_pixelUrl = istatsTrackingUrl;
+        /* used by Flash library to track */
+    }
+    function sitestat(n) {
+        var j = document, f = j.location, b = "";
+        if (j.cookie.indexOf("st_ux=") != -1) {
+            var k = j.cookie.split(";");
+            var e = "st_ux", h = document.domain, a = "/";
+            if (typeof ns_ != "undefined" && typeof ns_.ux != "undefined") {
+                e = ns_.ux.cName || e;
+                h = ns_.ux.cDomain || h;
+                a = ns_.ux.cPath || a
+            }
+            for (var g = 0, f = k.length; g < f; g++) {
+                var m = k[g].indexOf("st_ux=");
+                if (m != -1) {
+                    b = "&" + unescape(k[g].substring(m + 6))
+                }
+            }
+            document.cookie = e + "=; expires=" + new Date(new Date().getTime() - 60).toGMTString() + "; path=" + a + "; domain=" + h
+        }
+        ns_pixelUrl = n;
+        n = ns_pixelUrl + "&ns__t=" + (new Date().getTime()) + "&ns_c=" + ((j.characterSet) ? j.characterSet : j.defaultCharset) + "&ns_ti=" + escape(j.title) + b + "&ns_jspageurl=" + escape(f && f.href ? f.href : j.URL) + "&ns_referrer=" + escape(j.referrer);
+        if (n.length > 2000 && n.lastIndexOf("&")) {
+            n = n.substring(0, n.lastIndexOf("&") + 1) + "ns_cut=" + n.substring(n.lastIndexOf("&") + 1, n.lastIndexOf("=")).substring(0, 40)
+        }
+        (j.images) ? new Image().src = n : j.write('<p><i' + 'mg src="' + n + '" height="1" width="1" alt="" /></p>')
+    };
+})();
+/*]]>*/</script>
+<noscript><p style="position: absolute; top: -999em;"><img
+        src="//sa.bbc.co.uk/bbc/bbc/s?name=kl.iwonder.timelines.100_years_of_remembrance_1914_2014.z229kqt.page&amp;pal_route=webserviceapi&amp;ml_name=barlesque&amp;app_type=responsive&amp;language=en-GB&amp;ml_version=0.25.1&amp;pal_webapp=barlesque&amp;prod_name=frameworks&amp;app_name=frameworks&amp;blq_js_enabled=0&amp;blq_s=4d&amp;blq_r=2.7&amp;blq_v=default&amp;blq_e=pal"
+        height="1" width="1" alt=""/></p></noscript>
+<!-- End iStats (UX-CMC) -->   <!--[if (gt IE 8) | (IEMobile)]><!-->
+<header id="orb-banner" role="banner"> <!--<![endif]--> <!--[if (lt IE 9) & (!IEMobile)]>
+    <![if (IE 8)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie8"> <![endif]> <![if (IE 7)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie7"> <![endif]> <![if (IE 6)]> <header id="orb-banner" role="banner" class="orb-old-ie orb-ie6"> <![endif]> <![endif]-->
+    <div id="orb-header" class="orb-nav-pri orb-nav-pri-white orb-nav-empty">
+        <script type="text/javascript"> (function () {
+            var h = document.getElementById('orb-header');
+            if (/bbc\.co\.uk$/i.test(location.hostname) && orb_masthead_test.getSegment() == 'simple' && (location.pathname === '' || location.pathname === '/' || location.pathname === '/frameworks/test/mandolin/acceptance' && h.setAttribute)) {
+                h.setAttribute('data-max-w', '0');
+                h.setAttribute('data-max-d', '0');
+            }
+        }()); </script>
+        <div class="orb-nav-pri-container b-r b-g-p">
+            <div class="orb-nav-section orb-nav-blocks"><a href="/"> <img
+                    src="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/img/bbc-blocks-dark.png" width="84"
+                    height="24" alt="BBC"/> </a></div>
+            <section>
+                <div class="orb-skip-links"><h2>Accessibility links</h2>
+                    <ul>
+                        <li><a id="orb-accessibility-help" href="/accessibility/">Accessibility Help</a></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="orb-nav-section orb-nav-id orb-nav-focus orb-nav-id-default"><a id="idcta-link"
+                                                                                        href="https://ssl.bbc.co.uk/id/status"><img
+                    id="idcta-image" src="http://static.bbci.co.uk/id/0.24.7/img/bbcid_orb_signin_dark.png" alt=""
+                    width="18" height="18"/><span id="idcta-username">BBC iD</span></a></div>
+            <nav role="navigation" class="orb-nav">
+                <div class="orb-nav-section orb-nav-links orb-nav-focus" id="orb-nav-links"><h2>BBC navigation</h2>
+                    <ul>
+                        <li class="orb-nav-news orb-d"><a href="/news/">News</a></li>
+                        <li class="orb-nav-newsdotcom orb-w"><a href="http://www.bbc.com/news/">News</a></li>
+                        <li class="orb-nav-sport"><a href="/sport/">Sport</a></li>
+                        <li class="orb-nav-weather"><a href="/weather/">Weather</a></li>
+                        <li class="orb-nav-shop orb-w"><a href="http://shop.bbc.com/">Shop</a></li>
+                        <li class="orb-nav-earthdotcom orb-w"><a href="http://www.bbc.com/earth/">Earth</a></li>
+                        <li class="orb-nav-travel-dotcom orb-w"><a href="http://www.bbc.com/travel/">Travel</a></li>
+                        <li class="orb-nav-capital orb-w"><a href="http://www.bbc.com/capital/">Capital</a></li>
+                        <li class="orb-nav-iplayer orb-d"><a href="/iplayer/">iPlayer</a></li>
+                        <li class="orb-nav-culture orb-w"><a href="http://www.bbc.com/culture/">Culture</a></li>
+                        <li class="orb-nav-autos orb-w"><a href="http://www.bbc.com/autos/">Autos</a></li>
+                        <li class="orb-nav-future orb-w"><a href="http://www.bbc.com/future/">Future</a></li>
+                        <li class="orb-nav-tv"><a href="/tv/">TV</a></li>
+                        <li class="orb-nav-radio"><a href="/radio/">Radio</a></li>
+                        <li class="orb-nav-cbbc"><a href="/cbbc/">CBBC</a></li>
+                        <li class="orb-nav-cbeebies"><a href="/cbeebies/">CBeebies</a></li>
+                        <li class="orb-nav-arts orb-d"><a href="/arts/">Arts</a></li>
+                        <li><a href="/ww1/">WW1</a></li>
+                        <li class="orb-nav-food"><a href="/food/">Food</a></li>
+                        <li class="orb-nav-history"><a href="/history/">History</a></li>
+                        <li class="orb-nav-learning"><a href="/learning/">Learning</a></li>
+                        <li class="orb-nav-music"><a href="/music/">Music</a></li>
+                        <li class="orb-nav-science"><a href="/science/">Science</a></li>
+                        <li class="orb-nav-nature orb-w"><a href="/nature/">Nature</a></li>
+                        <li class="orb-nav-earth orb-d"><a href="http://www.bbc.com/earth/">Earth</a></li>
+                        <li class="orb-nav-local"><a href="/local/">Local</a></li>
+                        <li class="orb-nav-travel orb-d"><a href="/travel/">Travel</a></li>
+                        <li class="orb-nav-fullaz"><a href="/a-z/">Full A-Z</a></li>
+                        <li id="orb-nav-more"><a href="#orb-footer" data-alt="More">Menu<span
+                                class="orb-icon orb-icon-arrow"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="orb-nav-section orb-nav-search"><a href="http://search.bbc.co.uk/search"> <img
+                    src="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/img/orb-search-dark.png" width="18"
+                    height="18" alt="Search the BBC"/> </a>
+
+                <form class="b-f" id="orb-search-form" role="search" method="get"
+                      action="http://search.bbc.co.uk/search" accept-charset="utf-8">
+                    <div><label for="orb-search-q">Search the BBC</label> <input id="orb-search-q" type="text" name="q"
+                                                                                 placeholder="Search"/> <input
+                            type="image" id="orb-search-button"
+                            src="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/img/orb-search-dark.png"
+                            width="17" height="17" alt="Search the BBC"/></div>
+                </form>
+            </div>
+        </div>
+        <div id="orb-panels">
+            <script type="text/template" id="orb-panel-template"><![CDATA[
+            <div id="orb-panel-<%= panelname %>" class="orb-panel" aria-labelledby="orb-nav-<%= panelname %>">
+                <div class="orb-panel-content b-g-p b-r"> <%= panelcontent %></div>
+            </div> ]]></script>
+        </div>
+    </div>
+</header>
+<!-- Styling hook for shared modules only -->
+<div id="orb-modules">
+
+    <div class="k-content">
+        <div class="b-r b-g-p">
+            <div class="k-iwonder-content">
+                <a href="http://www.bbc.co.uk/iwonder">
+                    <div class="k-iwonder-logo"><span class="hide">BBC iWonder</span></div>
+                </a>
+            </div>
+        </div>
+        <div role="main" class="k-timeline timeline-12-events">
+            <div class="k-tl-hero">
+                <div class="k-tl-hero-image"
+                     style="background-image:url(http://ichef.bbci.co.uk/images/ic/608xn/p02bcc5d.jpg)"
+                     data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcc5d.jpg"></div>
+                <header class="k-tl-hero-header">
+                    <div class="k-tl-hero-panel"><h1 class="k-tl-hero-title-header">100 years of remembrance:
+                        1914-2014</h1></div>
+                    <div class="k-tl-navigation-indicator">
+                        <div class="k-tl-navigation-dates">
+                            <div class="k-tl-navigation-first-date">1914 - 1918</div>
+                            <div class="k-tl-navigation-last-date">Today</div>
+                        </div>
+                        <nav class="k-tl-navigation-indicator-nav">
+                            <ol class="k-tl-navigation-list timeline-12-events">
+                                <li class="k-tl-navigation__item event-1" data-start-date-time="1914-01-01 "><a
+                                        class="k-tl-navigation__link" href="#z9snsbk" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1914 - 1918</span><span
+                                        class="k-tl-navigation__indicator">We will remember them</span></a></li>
+                                <li class="k-tl-navigation__item event-2" data-start-date-time="1919-01-01 "><a
+                                        class="k-tl-navigation__link" href="#z3bhpv4" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1919</span><span
+                                        class="k-tl-navigation__indicator">A makeshift memorial</span></a></li>
+                                <li class="k-tl-navigation__item event-3" data-start-date-time="1920-01-01 "><a
+                                        class="k-tl-navigation__link" href="#z9m8d2p" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1920s</span><span
+                                        class="k-tl-navigation__indicator">The blueprint for commemoration</span></a>
+                                </li>
+                                <li class="k-tl-navigation__item event-4" data-start-date-time="1930-01-01 "><a
+                                        class="k-tl-navigation__link" href="#zwhq7ty" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1930s</span><span
+                                        class="k-tl-navigation__indicator">"Peace in our time"</span></a></li>
+                                <li class="k-tl-navigation__item event-5" data-start-date-time="1940-01-01 "><a
+                                        class="k-tl-navigation__link" href="#zqn2mp3" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1940s</span><span
+                                        class="k-tl-navigation__indicator">Combining remembrance</span></a></li>
+                                <li class="k-tl-navigation__item event-6" data-start-date-time="1950-01-01 "><a
+                                        class="k-tl-navigation__link" href="#z2fx6sg" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1950s</span><span
+                                        class="k-tl-navigation__indicator">Another way to remember</span></a></li>
+                                <li class="k-tl-navigation__item event-7" data-start-date-time="1960-01-01 "><a
+                                        class="k-tl-navigation__link" href="#zxvthyc" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1960s</span><span
+                                        class="k-tl-navigation__indicator">Re-examining the past</span></a></li>
+                                <li class="k-tl-navigation__item event-8" data-start-date-time="1970-01-01 "><a
+                                        class="k-tl-navigation__link" href="#ztbpn39" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1970s</span><span
+                                        class="k-tl-navigation__indicator">End of an era</span></a></li>
+                                <li class="k-tl-navigation__item event-9" data-start-date-time="1980-01-01 "><a
+                                        class="k-tl-navigation__link" href="#zprsfg8" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1980s</span><span
+                                        class="k-tl-navigation__indicator">Political overtones?</span></a></li>
+                                <li class="k-tl-navigation__item event-10" data-start-date-time="1990-01-01 "><a
+                                        class="k-tl-navigation__link" href="#zs4yvcw" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">1990s</span><span
+                                        class="k-tl-navigation__indicator">The power of the poppy</span></a></li>
+                                <li class="k-tl-navigation__item event-11" data-start-date-time="2000-01-01 "><a
+                                        class="k-tl-navigation__link" href="#zyk3b9q" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">2000s</span><span
+                                        class="k-tl-navigation__indicator">Remembrance during war</span></a></li>
+                                <li class="k-tl-navigation__item event-12" data-start-date-time="2014-01-01 "><a
+                                        class="k-tl-navigation__link" href="#z3wrcdm" tabindex="-1"><span
+                                        class="k-tl-navigation__tooltip">Today</span><span
+                                        class="k-tl-navigation__indicator">A century on</span></a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+            <div class="k-timeline-body">
+                <section id="z229kqt" class="with-connections k-tl-preamble">
+                    <div class="k-tl-preamble-body">
+                        <div class="k-tl-hero-additional">
+                            <div class="k-tl-hero-additional-body">
+                                <div class="k-tl-hero-circle">
+                                    <div class="k-tl-hero-circle-top">1914</div>
+                                    <div class="k-tl-hero-circle-bottom">2014</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="k-tl-connections">
+                            <div class="k-tl-hero-connection"><img
+                                    src="http://ichef.bbci.co.uk/images/ic/196x110/p02b5vmt.jpg"
+                                    data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02b5vmt.jpg" alt="">
+
+                                <p><span class="type">Presented by</span><span class="name">Sophie Raworth</span><span
+                                        class="role">Broadcaster</span></p></div>
+                        </div>
+                        <div class="k-tl-introduction"><h2 class="k-tl-introduction-title">How we remember</h2>
+
+                            <p class="k-tl-introduction-standfirst">Each year, on 11 November, the country falls silent
+                                to commemorate our war dead. This ritual, and the ceremonies and symbols that accompany
+                                it, have become part of national life.
+
+
+                            </p>
+
+                            <p class="k-tl-introduction-body-text">Remembrance started long before the guns of the
+                                Western Front fell silent with people marking the loss or absence of loved ones away at
+                                war. 100 years later, the personal and political resonances of remembrance still stir
+                                strong emotions. </p></div>
+                    </div>
+                </section>
+                <section id="z9snsbk" class="k-tl-event odd event-1">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description">
+                        <span>1914 - 1918</span></h2>
+
+                        <h3 class="k-tl-event-title"><span>We will remember them</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02bc630" data-version-pid="p02bc633"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02bc62h.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02bc62h.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Sophie Raworth on how
+                                    commemoration began before the end of the First World War.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/z322mp3/transcript">
+                                        Transcript (PDF 210k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">Before the poppy or the symbols of remembrance that we know
+                                today came into being, people started to mark the absence of those at the front.</p>
+
+                            <p class="k-tl-event-body-text">It was the first time that British men had marched to war in
+                                such numbers. From 1916, street shrines began to appear. A year later, the Imperial War
+                                Museum was founded to record the conflict for future generations. The Imperial War
+                                Graves Commission (IWGC) was established to record the deaths and mark the graves of
+                                those who had fallen.</p>
+
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link"
+                                                                    href="http://www.bbc.co.uk/guides/z8tgq6f">How do we
+                                    remember the First World War?<span></span></a>
+                                    <a class="k-tl-event-external-link"
+                                                                                     href="http://www.bbc.co.uk/ww1/ww1-at-home/find-locations">Find
+                                    out how WW1 affected your local area<span></span></a>
+                                    <a class="k-tl-event-external-link"
+                                                                                            href="http://www.bbc.co.uk/guides/zq2jq6f">What
+                                    can today's soldiers learn from WW1?<span></span></a>
+                                </div>
+
+
+
+
+                                </div>
+
+                                <script>
+                                    var makeBigger = function(element) {
+                                        element.className = 'bigger';
+                                    };
+                                    var makeSmaller = function(element) {
+                                        element.className = '';
+                                    };
+                                    var toggleSize = function(element) {
+                                        element.className = element.className === '' ? 'bigger' : '';
+                                    };
+                                </script>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/abstract-art.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/abstract-art.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #00a030">Abstract art timeline: colour and shape</p>
+                                                    <p class="date-description"><span style="background-color: #19c286">1915</span></p>
+                                                    <p class="event-title">Beyond representation is a long title</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zp7bgk7" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #2edfd2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/abstract-art.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="k-tl-quote">
+                        <div class="k-tl-quote-main with-image"
+                             style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p02bcbw2.jpg")'
+                             data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcbw2.jpg">
+                            <div class="k-tl-quote-wrapper">
+                                <blockquote class="k-tl-quote-content"><p class="k-tl-quote-text">At the going down of
+                                    the sun and in the morning, We will remember them.</p>
+                                    <footer><cite class="k-tl-quote-attribution">For the Fallen by Laurence Binyon,
+                                        September 1914</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="z3bhpv4" class="k-tl-event even event-2">
+                    <div class="k-tl-event-panel"><h2 class="k-tl-event-date-description"><span>1919</span></h2>
+
+                        <h3 class="k-tl-event-title"><span>A makeshift memorial</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="k-tl-image"><p class="k-tl-image-credit">Getty Images</p><img class="resp"
+                                                                                                          src="http://ichef.bbci.co.uk/images/ic/496xn/p02d03mp.jpg"
+                                                                                                          data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02d03mp.jpg"
+                                                                                                          alt="The Cenotah in Whitehall, London, July 1919">
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">The Cenotaph was first unveiled
+                                    in Whitehall, London, in July 1919.</p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">War only officially ended in June 1919 with the signing of
+                                the Treaty of Versailles and the nation could start to face the scale of its loss.</p>
+
+                            <p class="k-tl-event-body-text">Prime Minister Lloyd George asked architect Edward Lutyens
+                                to design a structure for a Peace Day parade in London. Lutyens sketched a design on the
+                                back of a napkin and a temporary version of the Cenotaph was erected. Nearly 15,000
+                                troops took part but many veterans refused to participate in what they saw as
+                                'militaristic celebrations'. Four days before the first anniversary of Armistice Day,
+                                King George V announced that a two minute silence would be observed.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a
+                                class="k-tl-event-external-link" href="http://www.bbc.co.uk/guides/zp3ncdm">Does the
+                            peace that ended World War One haunt us today?<span></span>
+                                    </a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/lloyd-george.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/lloyd-george.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #005361">The rise and fall of David Lloyd George</p>
+                                                    <p class="date-description"><span style="background-color: #27c8c0">1919</span></p>
+                                                    <p class="event-title">Winning the peace?</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zpmhpv4" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #2edfd2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/lloyd-george.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="k-tl-quote">
+                        <div class="k-tl-quote-main with-image"
+                             style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p02bcg1g.jpg")'
+                             data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcg1g.jpg">
+                            <div class="k-tl-quote-wrapper">
+                                <blockquote class="k-tl-quote-content"><p class="k-tl-quote-text">Today is Peace Day</p>
+                                    <footer><cite class="k-tl-quote-attribution">Manchester Guardian, 11 November
+                                        1919</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="z9m8d2p" class="k-tl-event odd event-3">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1920s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>The blueprint for commemoration</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02bc5zb" data-version-pid="p02bc5zf"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02bc5y5.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02bc5y5.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Sophie Raworth explains how the
+                                    rituals and monuments associated with Remembrance became established in the
+                                    1920s.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/z8ssfg8/transcript">
+                                        Transcript (PDF 210k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">Soldiers returning home to civilian life did not find the
+                                promised 'land fit for heroes', but a country gripped by recession and unemployment.</p>
+
+                            <p class="k-tl-event-body-text">In 1921, Douglas Haig and the Royal British Legion adopted
+                                and popularised the artificial poppy as a symbol of remembrance. Proceeds were used to
+                                assist the great many ex-servicemen in need - some of whom could be seen protesting the
+                                services at the Cenotaph each year. Throughout, the IWGC continued to erect graves and
+                                monuments to the First World War across the country and overseas. By the end of the
+                                decade many of the rituals and events we might recognise today had been established.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/guides/zqhxvcw">
+                                        Did World War One nearly bankrupt Britain?<span></span></a>
+                                    <a class="k-tl-event-external-link" href="http://www.cwgc.org/">
+                                        Find out more about the CWGC (formerly IWGC)<span></span></a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/scifi.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/scifi.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #005361">Writing the future: A timeline of science fiction literature</p>
+                                                    <p class="date-description"><span style="background-color: #138c8f; color:#fff">1926</span></p>
+                                                    <p class="event-title">Amazing Stories: Defining the genre</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zp7dwmn" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #2edfd2;"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/scifi.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="zwhq7ty" class="k-tl-event even event-4">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1930s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>"Peace in our time"</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9cnj" data-version-pid="p02b9cp3"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9b1v.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9b1v.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Listen to the BBC radio broadcast
+                                    of the 1933 remembrance service.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/zqgc4wx/transcript">
+                                        Transcript (PDF 209k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">Memorialisation of the First World War continued well into
+                                the 1930s as thousands of local monuments dramatically changed the civic landscape.</p>
+
+                            <p class="k-tl-event-body-text">Monuments also continued to be built overseas - the Prince
+                                of Wales unveiled the Thiepval Memorial to the Missing in 1932. But as the spectre of
+                                conflict loomed over Europe, it was feared that the traditions of remembrance had failed
+                                to serve as an effective reminder of the cost of war. From 1933 the white poppy began to
+                                appear, symbolising peace. Some members of the Women's Cooperative Guild who wore it
+                                lost their jobs. In 1936 the Peace Pledge Union was created and adopted the symbol.</p>
+                            <div class="bottom-stuff">
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/bbc.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/bbc.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #005361">History of the BBC</p>
+                                                    <p class="date-description"><span style="background-color: #005361; color:white">1930s</span></p>
+                                                    <p class="event-title">1930s - the birth of television</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zy9yvcw" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #2edfd2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/bbc.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="k-tl-quote">
+                        <div class="k-tl-quote-main with-image"
+                             style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p02bcg3z.jpg")'
+                             data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcg3z.jpg">
+                            <div class="k-tl-quote-wrapper">
+                                <blockquote class="k-tl-quote-content"><p class="k-tl-quote-text">The peace movement has
+                                    received its main support from women, but it seems high time now that men should
+                                    throw their weight into the scales against war</p>
+                                    <footer><cite class="k-tl-quote-attribution">Peace Pledge Union founder Dick
+                                        Sheppard, 1934</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="zqn2mp3" class="k-tl-event odd event-5">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1940s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>Combining remembrance</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9d4x" data-version-pid="p02b9d59"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9cns.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9cns.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Watch the 1949 remembrance
+                                    service at the Cenotaph broadcast by the BBC.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/z2c9kqt/transcript">
+                                        Transcript (PDF 148k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">The world was again plunged into war in 1939 and no
+                                official Armistice Day services were held while the fighting continued.</p>
+
+                            <p class="k-tl-event-body-text">How could Britain honour those who died in the 'war to end
+                                all wars' when just two decades later the lessons of that conflict appeared to have been
+                                forgotten? After the war, there was no great clamour to memorialise - reconstruction not
+                                remembrance was the public's focus. In 1947, after some debate, it was agreed that the
+                                Second World War, would be marked alongside the First, in just one national day:
+                                Remembrance Sunday.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/timelines/z9k99j6">
+                                        D-Day Timeline: The beginning of the end of WW2<span></span></a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/code.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/code.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #005869">How the world came to be run by computer code</p>
+                                                    <p class="date-description"><span style="background-color: #07755b; color: #fff">1948</span></p>
+                                                    <p class="event-title">Manchester's 'Baby': the first electronic computer</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zxsrcdm" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #9ee52c"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/code.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="k-tl-quote">
+                        <div class="k-tl-quote-main with-image"
+                             style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p02bcg7g.jpg")'
+                             data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcg7g.jpg">
+                            <div class="k-tl-quote-wrapper">
+                                <blockquote class="k-tl-quote-content"><p class="k-tl-quote-text">Although the two wars
+                                    were twenty-five years apart, time will close the gap until they will appear to
+                                    posterity one great struggle against evil.</p>
+                                    <footer><cite class="k-tl-quote-attribution">Lord Chatfield, 1947</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="z2fx6sg" class="k-tl-event even event-6">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1950s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>Another way to remember</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9frb" data-version-pid="p02b9fst"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9kxd.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9kxd.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">As television grew in popularity,
+                                    the BBC could reach a wider audience in the 1950s. Watch Richard Dimbleby broadcast
+                                    the Remembrance Day service.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/zt8wjxs/transcript">
+                                        Transcript (PDF 149k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">The 1950s again saw British troops in combat. 100,000
+                                served in Korea, while in 1956 attempts to control the Suez Canal sparked a major
+                                crisis.</p>
+
+                            <p class="k-tl-event-body-text">Back in Britain, a new medium was changing how people took
+                                part in Remembrance services. Television sales had risen sharply after the coronation of
+                                Queen Elizabeth in 1953. Remembrance Day events could now be brought into more homes
+                                than ever before – watching commemoration unfold at home was now a bigger part of the
+                                nation’s relationship with the war.</p>
+                            <div class="bottom-stuff">
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/fifa.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/fifa.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #2edfd2; color:#333">The story of the Fifa World Cup</p>
+                                                    <p class="date-description"><span style="background-color: #49e0ab;">June - July 1954</span></p>
+                                                    <p class="event-title">Switzerland</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zp2mmp3" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #2edfd2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/fifa.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="zxvthyc" class="k-tl-event odd event-7">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1960s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>Re-examining the past</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9l5p" data-version-pid="p02b9l67"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9fy0.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9fy0.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Clip from 'I was there: the Great
+                                    War interviews', BBC Two</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/zpwq7ty/transcript">
+                                        Transcript (PDF 209k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">Set against the looming spectre of nuclear devastation, a
+                                new way of thinking about the First World War emerged in the 1960s.</p>
+
+                            <p class="k-tl-event-body-text">As the Campaign for Nuclear Disarmament echoed the 1930s
+                                pacifist movement, films such as 'Oh! What a Lovely War' recast the conflict as a futile
+                                waste of life. Poets like Wilfred Owen, who emphasised its horrors, grew more popular.
+                                Meanwhile, the BBC released landmark documentary 'The Great War' and, for the first
+                                time, ordinary people's stories were brought to a mass audience. By the close of the
+                                decade, how the nation collectively viewed and remembered the war had experienced a
+                                major shift.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/guides/zws9xnb">
+                                        Did Oh What a Lovely War shape our view of WW1?<span></span></a>
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/iplayer/group/p01tbj6p">
+                                        Watch more of The Great War interviews<span></span></a>
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/guides/z38rq6f">
+                                        Has poetry distorted our view of WW1?<span></span></a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/ref.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/ref.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #0a5869">Scotland's road to referendum</p>
+                                                    <p class="date-description"><span style="background-color: #97d431">1960s</span></p>
+                                                    <p class="event-title">Discovery of oil and the rise of the SNP</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/ztrpn39" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #9ee52c;"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/ref.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="k-tl-quote">
+                        <div class="k-tl-quote-main with-image"
+                             style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p02bcgf5.jpg")'
+                             data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcgf5.jpg">
+                            <div class="k-tl-quote-wrapper">
+                                <blockquote class="k-tl-quote-content"><p class="k-tl-quote-text">Old soldiers never
+                                    die, the young ones wish they would.</p>
+                                    <footer><cite class="k-tl-quote-attribution">Oh! What a Lovely War</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="ztbpn39" class="k-tl-event even event-8">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1970s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>End of an era</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9lns" data-version-pid="p02b9lpj"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9l40.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9l40.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Watch the 'Old Contemptibles'
+                                    march past the Cenotaph in 1973.</p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">Throughout the 1970s, many prominent veterans of the First
+                                World War began to die, taking with them our most powerful link to the past.</p>
+
+                            <p class="k-tl-event-body-text">Amidst suggestions of a growing ambivalence, some local
+                                memorial ceremonies began to lapse, and historical scholarship became much more focused
+                                on the more recent Second World War. Meanwhile, as conflicts like Vietnam played out
+                                across the mainstream media, anti-war feeling continued to grow. Attitudes to
+                                commemoration of war were undoubtedly affected as a result.</p>
+
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link"
+                                       href="http://www.westminster-abbey.org/our-history/people/old-contemptibles,-british-expeditionary-force">
+                                        The Old Contemptibles memorial<span></span></a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/ira.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/ira.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #00a030">The IRA: From conflict to ceasefire</p>
+                                                    <p class="date-description"><span style="background-color: #14a92f; color: #fff">21 July 1972</span></p>
+                                                    <p class="event-title">Bloody Friday</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/z2wyvcw" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #9ee52c"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/ira.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="zprsfg8" class="k-tl-event odd event-9">
+                    <div class="k-tl-event-panel"><h2 class="k-tl-event-date-description"><span>1980s</span></h2>
+
+                        <h3 class="k-tl-event-title"><span>Political overtones?</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="k-tl-image"><p class="k-tl-image-credit">Topfoto</p><img class="resp"
+                                                                                                     src="http://ichef.bbci.co.uk/images/ic/496xn/p02d025p.jpg"
+                                                                                                     data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02d025p.jpg"
+                                                                                                     alt="Destruction of the Enniskillen bombing, Remembrance Day 1987">
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">The aftermath of the Enniskillen
+                                    bombing on Remembrance Day, 1987.</p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">Remembrance can be a politically charged affair.
+                                Argentina's 1982 invasion of the Falkland Islands helped bring the military back into
+                                the public eye.</p>
+
+                            <p class="k-tl-event-body-text">Remembrance always means different things to different
+                                people. For some its resurgent popularity lay in recognising the sacrifice of those who
+                                had died defending British soil in the Falklands War. Others saw its growing
+                                significance as tied to a perceived rise in nationalism after that conflict. A group of
+                                IRA radicals in 1987 saw it as an opportunity. In bombing a remembrance service in
+                                Enniskillen, Northern Ireland, they killed 11 people and injured 68 more in a roundly
+                                condemned attack.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/events/enniskillen_bombing">
+                                        Find out more about the Enniskillen bombing<span></span></a>
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/histories/troubles">
+                                        Learn about The Troubles in N. Ireland<span></span></a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/fifa.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/fifa.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #2edfd2; color:#333">The story of the Fifa World Cup</p>
+                                                    <p class="date-description"><span style="background-color: #49e0ab;">May - June 1986</span></p>
+                                                    <p class="event-title">Mexico</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/zp2mmp3" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #2edfd2"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/fifa.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="k-tl-quote">
+                        <div class="k-tl-quote-main with-image"
+                             style='background-image: url("http://ichef.bbci.co.uk/images/ic/496x279/p02bcgkp.jpg")'
+                             data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02bcgkp.jpg">
+                            <div class="k-tl-quote-wrapper">
+                                <blockquote class="k-tl-quote-content"><p class="k-tl-quote-text">Every nation should
+                                    honour its dead…and we should all be able to stand and honour them in peace.</p>
+                                    <footer><cite class="k-tl-quote-attribution">Margaret Thatcher, Remembrance Day
+                                        1987</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="zs4yvcw" class="k-tl-event even event-10">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>1990s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>The power of the poppy</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9kqf" data-version-pid="p02b9kr4"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9ggc.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9ggc.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Watch as BBC News reports on the
+                                    Remembrance Day service in 1995.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/zy2x6sg/transcript">
+                                        Transcript (PDF 205k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">By the end of the century, the Gulf War and the 50th
+                                anniversary of the Second World War lent impetus to the debate around the role of
+                                Remembrance.</p>
+
+                            <p class="k-tl-event-body-text">Though the silence continued to be a feature of Remembrance
+                                Sunday, 1995 saw a Royal British Legion campaign to restore it to Armistice Day too. On
+                                11 November it did. The British Legion continued fundraising and experienced significant
+                                growth. As they rose in prominence, so too did the red poppy – that decades-old symbol
+                                of remembrance. At the same time, public appetite for family history and a broader rise
+                                in interest in the past made it easier for people to identify with remembrance.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.britishlegion.org.uk/">
+                                        Find out more about the Royal British Legion<span></span></a>
+                                </div>
+                                <div id="all">
+                                    <div id="page-flip"
+                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                        <div id="r1"><div id="p1">
+                                            <div style="background-image:url(images/zoo.jpg)">
+                                                <div>Did you know...</div>
+                                            </div>
+                                        </div></div>
+                                        <div id="p2">
+                                            <div style="background-image:url(images/zoo.jpg)">
+                                                <div class="bg">
+                                                    <p class="hero-title" style="background-color: #2edfd2; color:#333">The story of British zoos</p>
+                                                    <p class="date-description"><span style="background-color: #49e0ab;">1991</span></p>
+                                                    <p class="event-title">London Zoo almost closes</p>
+                                                    <a href="http://www.bbc.co.uk/timelines/z2njq6f" class="read-more">
+                                                        <span class="text">Read more</span>
+                                                        <span class="arrow" style="background-color: #9ee52c"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="r3">
+                                            <div id="p3">
+                                                <div style="background-image:url(images/zoo.jpg)">
+                                                    <p>Did you know what else happened at the same time as this?</p>
+                                                    <div class="spine"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="zyk3b9q" class="k-tl-event odd event-11">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>2000s</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>Remembrance during war</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9kvy" data-version-pid="p02b9kw9"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9j8l.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9j8l.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Watch Caroline Wyatt report on
+                                    remembrance services held by British troops in Afghanistan in 2009.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/z36hpv4/transcript">
+                                        Transcript (PDF 206k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">At war for much of the decade, in Afghanistan and then
+                                Iraq, British military deaths grew steadily as the years progressed.</p>
+
+                            <p class="k-tl-event-body-text">In March 2003, hundreds of thousands took to the streets to
+                                voice their opposition to war with Iraq. Many found it hard to reconcile that opposition
+                                with Remembrance Day services. In 2007 the first monument specifically dedicated to
+                                servicemen and women who died in action since the end of the Second World War was
+                                erected and symbolism of the First World War remained pronounced. On 11 November, at
+                                11am, the sun’s rays fall on a wreath at the centre of the memorial.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/special_reports/struggle_for_iraq/">
+                                        BBC News on the struggle for Iraq<span></span></a>
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/the_war_in_afghanistan">
+                                        The war in Afghanistan<span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="z3wrcdm" class="k-tl-event even event-12">
+                    <div class="k-tl-event-panel no-media"><h2 class="k-tl-event-date-description"><span>Today</span>
+                    </h2>
+
+                        <h3 class="k-tl-event-title"><span>A century on</span></h3>
+
+                        <div class="k-tl-event-details">
+                            <div class="k-tl-event-media">
+                                <div class="emp-wrapper">
+                                    <div class="emp" data-pid="p02b9lnz" data-version-pid="p02b9lpm"
+                                         data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p02b9lg0.jpg">
+                                        <div class="emp-placeholder"><img
+                                                src="http://ichef.bbci.co.uk/images/ic/496x279/p02b9lg0.jpg" alt="">
+                                        </div>
+                                        <div class="emp-fallback"><p>You need to have JavaScript enabled to view this
+                                            clip.</p></div>
+                                    </div>
+                                </div>
+                                <div class="k-tl-caption"><p class="k-tl-caption-text">Watch Fiona Bruce report on the
+                                    2014 Tower of London installation commemorating the First World War for BBC
+                                    News.</p>
+
+                                    <p class="k-tl-transcript"><a class="k-tl-download"
+                                                                  href="http://a.files.bbci.co.uk/bam/live/content/zcsyvcw/transcript">
+                                        Transcript (PDF 149k)
+                                    </a></p></div>
+                            </div>
+                            <p class="k-tl-event-standfirst">100 years from the start of the First World War, there is
+                                still debate over how war should be remembered and commemorated.</p>
+
+                            <p class="k-tl-event-body-text">Some feel uncomfortable at links to the military. Others
+                                find religious and political undercurrents difficult to align with a desire to respect
+                                those that died defending their country. The past is remembered in our present. But the
+                                enduring power of commemoration - more than four million visitors have paid their
+                                respects this year at an installation of poppies at the Tower of London - owes much to
+                                the symbols and ideas that emerged after the First World War.</p>
+                            <div class="bottom-stuff">
+                                <div class="k-tl-event-links">
+                                    <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/guides/ztcfyrd">
+                                        Remembrance Day 2014: How will we remember them?<span></span></a>
+                                    <a class="k-tl-event-external-link" href="https://poppies.hrp.org.uk/about-the-installation">
+                                        Find out more about the Tower of London poppies<span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="k-tl-last-event">
+                    <div class="k-tl-last-event-wrapper">
+                        <div class="k-tl-last-event-circle">
+                            <div class="k-tl-last-event-circle-top">1914</div>
+                            <div class="k-tl-last-event-circle-bottom">2014</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="k-tl-where-next">
+                    <div class="k-tl-where-next-body"><h2 class="k-tl-where-next-title">Where next?</h2>
+
+                        <div class="k-promo-panel">
+                            <div class="
+                k-iwonder-promo
+                promo-1
+                    k-colour-palette-palette-1"><a href="http://www.bbc.co.uk/guides/zq2jq6f">
+                                <div class="media"><img src="http://ichef.bbci.co.uk/images/ic/160x160/p02b8sqw.jpg"
+                                                        data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02b8sqw.jpg"
+                                                        alt=""><span class="overlay"></span></div>
+                                <div class="context"><p class="title">What can today's soldiers learn from WW1?</p>
+                                </div>
+                            </a></div>
+                            <div class="
+                k-iwonder-promo
+                promo-2
+                    k-colour-palette-palette-1"><a href="http://www.bbc.co.uk/guides/zgmq7ty">
+                                <div class="media"><img src="http://ichef.bbci.co.uk/images/ic/160x160/p02b38tq.jpg"
+                                                        data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02b38tq.jpg"
+                                                        alt=""><span class="overlay"></span></div>
+                                <div class="context"><p class="title">Lest we forget: How does art help us remember
+                                    WW1?</p></div>
+                            </a></div>
+                            <div class="
+                k-gel-promo
+                promo-3"><a href="http://www.bbc.co.uk/ww1">
+                                <div class="media"><img src="http://ichef.bbci.co.uk/images/ic/160x90/p0206bh3.jpg"
+                                                        data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p0206bh3.jpg"
+                                                        alt=""><span class=""></span><span class="overlay"></span></div>
+                                <div class="context"><p class="title">BBC WW1 Centenary</p></div>
+                            </a></div>
+                            <div class="
+                k-iwonder-promo
+                promo-4
+                    k-colour-palette-palette-5"><a href="http://www.bbc.co.uk/iwonder">
+                                <div class="media"><img src="http://ichef.bbci.co.uk/images/ic/160x160/p025ltxy.jpg"
+                                                        data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p025ltxy.jpg"
+                                                        alt=""><span class="overlay"></span></div>
+                                <div class="context"><p class="title">More from BBC iWonder</p></div>
+                            </a></div>
+                            <div class="
+                k-iwonder-promo
+                promo-5
+                    k-colour-palette-palette-1"><a href="http://www.bbc.co.uk/guides/ztcfyrd">
+                                <div class="media"><img src="http://ichef.bbci.co.uk/images/ic/160x160/p02b67hf.jpg"
+                                                        data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02b67hf.jpg"
+                                                        alt=""><span class="overlay"></span></div>
+                                <div class="context"><p class="title">Remembrance Day 2014: How will we remember
+                                    them?</p></div>
+                            </a></div>
+                            <div class="
+                k-iwonder-promo
+                promo-6
+                    k-colour-palette-palette-4"><a href="http://www.bbc.co.uk/guides/zwpx6sg">
+                                <div class="media"><img src="http://ichef.bbci.co.uk/images/ic/160x160/p02b5nmb.jpg"
+                                                        data-image-recipe="http://ichef.bbci.co.uk/images/ic/$recipe/p02b5nmb.jpg"
+                                                        alt=""><span class="overlay"></span></div>
+                                <div class="context"><p class="title">How do you find out what your family did in
+                                    WW1?</p></div>
+                            </a></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div id="orb-footer" class="orb-footer orb-footer-grey">
+    <aside role="complementary">
+        <div id="orb-aside" class="orb-nav-sec b-r b-g-p">
+            <div class="orb-footer-inner" role="navigation"><h2 class="orb-footer-lead">Explore the BBC</h2>
+
+                <div id="orb-footer-promo" class="orb-d"></div>
+                <div class="orb-footer-primary-links">
+                    <ul>
+                        <li class="orb-nav-news orb-d"><a href="/news/">News</a></li>
+                        <li class="orb-nav-newsdotcom orb-w"><a href="http://www.bbc.com/news/">News</a></li>
+                        <li class="orb-nav-sport"><a href="/sport/">Sport</a></li>
+                        <li class="orb-nav-weather"><a href="/weather/">Weather</a></li>
+                        <li class="orb-nav-shop orb-w"><a href="http://shop.bbc.com/">Shop</a></li>
+                        <li class="orb-nav-earthdotcom orb-w"><a href="http://www.bbc.com/earth/">Earth</a></li>
+                        <li class="orb-nav-travel-dotcom orb-w"><a href="http://www.bbc.com/travel/">Travel</a></li>
+                        <li class="orb-nav-capital orb-w"><a href="http://www.bbc.com/capital/">Capital</a></li>
+                        <li class="orb-nav-iplayer orb-d"><a href="/iplayer/">iPlayer</a></li>
+                        <li class="orb-nav-culture orb-w"><a href="http://www.bbc.com/culture/">Culture</a></li>
+                        <li class="orb-nav-autos orb-w"><a href="http://www.bbc.com/autos/">Autos</a></li>
+                        <li class="orb-nav-future orb-w"><a href="http://www.bbc.com/future/">Future</a></li>
+                        <li class="orb-nav-tv"><a href="/tv/">TV</a></li>
+                        <li class="orb-nav-radio"><a href="/radio/">Radio</a></li>
+                        <li class="orb-nav-cbbc"><a href="/cbbc/">CBBC</a></li>
+                        <li class="orb-nav-cbeebies"><a href="/cbeebies/">CBeebies</a></li>
+                        <li class="orb-nav-arts orb-d"><a href="/arts/">Arts</a></li>
+                        <li><a href="/ww1/">WW1</a></li>
+                        <li class="orb-nav-food"><a href="/food/">Food</a></li>
+                        <li class="orb-nav-history"><a href="/history/">History</a></li>
+                        <li class="orb-nav-learning"><a href="/learning/">Learning</a></li>
+                        <li class="orb-nav-music"><a href="/music/">Music</a></li>
+                        <li class="orb-nav-science"><a href="/science/">Science</a></li>
+                        <li class="orb-nav-nature orb-w"><a href="/nature/">Nature</a></li>
+                        <li class="orb-nav-earth orb-d"><a href="http://www.bbc.com/earth/">Earth</a></li>
+                        <li class="orb-nav-local"><a href="/local/">Local</a></li>
+                        <li class="orb-nav-travel orb-d"><a href="/travel/">Travel</a></li>
+                        <li class="orb-nav-fullaz"><a href="/a-z/">Full A-Z</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <footer role="contentinfo">
+        <div id="orb-contentinfo" class="orb-nav-sec b-r b-g-p">
+            <div class="orb-footer-inner">
+                <ul>
+                    <li><a href="/terms/">Terms of Use</a></li>
+                    <li><a href="/aboutthebbc/">About the BBC</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/privacy/cookies/about">Cookies</a></li>
+                    <li><a href="/accessibility/">Accessibility Help</a></li>
+                    <li><a href="/guidance/">Parental Guidance</a></li>
+                    <li><a href="/contact/">Contact the BBC</a></li>
+                </ul>
+                <small><span class="orb-hilight">Copyright &copy; 2015 BBC.</span> The BBC is not responsible for the
+                    content of external sites. <a href="/help/web/links/" class="orb-hilight">Read about our approach to
+                        external linking.</a></small>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- BBCDOTCOM bodyLast -->
+<div class="bbccom_display_none">
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && window.bbcdotcom.analytics) {
+        bbcdotcom.analytics.page();
+    }
+    if (window.bbcdotcom && bbcdotcom.currencyProviders) {
+        bbcdotcom.currencyProviders.write();
+    }
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && bbcdotcom.currencyProviders) {
+        bbcdotcom.currencyProviders.postWrite();
+    }
+    /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/ /** * ASNYC waits to make any gpt requests until the bottom of the page */ /*]]>*/ </script>
+    <script type="text/javascript"> /*<![CDATA[*/
+    if (window.bbcdotcom && bbcdotcom.data && bbcdotcom.data.stats && bbcdotcom.data.stats === 1 && bbcdotcom.utils && window.location.pathname === '/' && window.bbccookies && bbccookies.readPolicy('performance')) {
+        var wwhpEdition = bbcdotcom.utils.getMetaPropertyContent('wwhp-edition');
+        var _sf_async_config = {};
+        /** CONFIGURATION START **/ _sf_async_config.uid = 50924;
+        _sf_async_config.domain = "bbc.co.uk";
+        _sf_async_config.title = "Homepage" + (wwhpEdition !== '' ? ' - ' + wwhpEdition : '');
+        _sf_async_config.sections = "Homepage" + (wwhpEdition !== '' ? ', Homepage - ' + wwhpEdition : '');
+        _sf_async_config.region = wwhpEdition;
+        _sf_async_config.path = "/" + (wwhpEdition !== '' ? '?' + wwhpEdition : '');
+        /** CONFIGURATION END **/ (function () {
+            function loadChartbeat() {
+                window._sf_endpt = (new Date()).getTime();
+                var e = document.createElement("script");
+                e.setAttribute("language", "javascript");
+                e.setAttribute("type", "text/javascript");
+                e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                document.body.appendChild(e);
+            }
+
+            var oldonload = window.onload;
+            window.onload = (typeof window.onload != "function") ? loadChartbeat : function () {
+                oldonload();
+                loadChartbeat();
+            };
+        })();
+    }
+    /*]]>*/ </script>
+</div>
+<!-- BBCDOTCOM all code in page -->
+<script type="text/javascript"> document.write('<' + 'script id="orb-js-script" data-assetpath="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/" src="http://static.bbci.co.uk/frameworks/barlesque/2.83.2/orb/4/script' + (( document.cookie.indexOf('ckns_debugorbjs') > -1 ) ? '-debug' : '') + '/orb.js"><' + '/script>'); </script>
+<script type="text/javascript"> (function () {
+    'use strict';
+
+    var promoManager = {
+        url: '',
+        segments: ['a', 'b'],
+        promoLoaded: false,
+        makeUrl: function (variant, theme, win) {
+            var loc = win ? win.location : window.location,
+                    proto = loc.protocol,
+                    host = loc.host,
+                    url = proto + '//' + ((proto.match(/s:/i) && !host.match(/^www\.(int|test)\./i)) ? 'ssl.' : 'www.'),
+                    themes = ['light', 'dark'];
+
+            if (host.match(/^(?:www|ssl)\.(int|test|stage|live)\.bbc\./i)) {
+                url += RegExp.$1 + '.';
+            }
+            else if (host.match(/^pal\.sandbox\./i)) {
+                url += 'test.';
+            }
+
+            theme = themes[ +(theme === themes[0]) ];
+
+            return url + 'bbc.co.uk/navpromo/' + variant + '/' + theme;
+        },
+        validSegment: function (segment) {
+            var validSegments = this.segments;
+
+            for (var i = 0, len = validSegments.length; i < len; i++) {
+                if (validSegments[i] === segment) {
+                    return segment;
+                }
+            }
+
+            return validSegments[0];
+        },
+        init: function (node) {
+            var disabledByCookie = (document.cookie.indexOf('ckns_orb_nopromo=1') > -1),
+                    orbFullWidth = (document.getElementById('orb-aside').offsetWidth >= 1008),
+                    that = this;
+
+            if (window.promomanagerOverride) {
+                for (var p in promomanagerOverride) {
+                    that[p] = promomanagerOverride[p];
+                }
+            }
+
+            if (window.orb.fig('uk') && orbFullWidth && !disabledByCookie) {
+                require(['orb/async/_footerpromo', 'istats-1'], function (promo, istats) {
+                    var mandolinEndDate = new Date().getTime() + (7 * 60 * 60 * 24) * 1000,
+                            mandolin = new bbc.Mandolin('footer-promo', that.segments, {rate: 0.2, end: mandolinEndDate}),
+                            segmentToRequest = that.validSegment(mandolin.getSegment());
+
+                    that.url = (window.promomanagerOverride || that).makeUrl(segmentToRequest, 'light');
+
+                    if (that.url) {
+                        promo.load(that.url, node, {
+                            onSuccess: function (e) {
+                                istats.addLabels({ 'campaignID': e.campaignID });
+                                if (segmentToRequest === mandolin.getSegment()) {
+                                    istats.addLabels({ 'promo_id_segment': e.campaignID + ':' + mandolin.getSegment() });
+                                }
+                                istats.track('internal', {region: node, linkLocation: 'orb-footer-promo'});
+
+                                istats.log('display', 'orb-footer-promo-displayed', {campaignID: e.campaignID, testVariant: segmentToRequest});
+                                node.className = node.className + ' orb-footer-promo-loaded';
+                                promoManager.promoLoaded = true;
+                                promoManager.event('promo-loaded').fire(e);
+                            },
+                            onError: function () {
+                                istats.log('error', 'orb-footer-promo-failed');
+                                document.cookie = 'ckns_orb_nopromo=1; expires=' + new Date(new Date().getTime() + 1000 * 60 * 10).toGMTString() + ';';
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    };
+
+
+    define('orb/promomanager', ['orb/lib/_event'], function (event) {
+        event.mixin(promoManager);
+        return promoManager;
+    });
+
+    require(['orb/promomanager'], function (promoManager) {
+        promoManager.init(document.getElementById('orb-footer-promo'));
+    })
+})();
+</script>
+<script type="text/javascript"> if (typeof require !== 'undefined') {
+    require(['istats-1'], function (istats) {
+        istats.track('external', { region: document.getElementsByTagName('body')[0] });
+        istats.track('download', { region: document.getElementsByTagName('body')[0] });
+    });
+} </script>
+<script src="http://a.files.bbci.co.uk/s/kandltimelines/1274-1/js/kandltimelines/timelinePage.js"></script>
+<script>
+    require.config({ paths: { "bump-3": window.location.protocol == 'https:' ? "https:\/\/ssl.bbc.co.uk\/emp\/bump-3\/ssl" : "http:\/\/emp.bbci.co.uk\/emp\/bump-3\/bump-3" } });
+    require(["kandltimelines/timelinePage"], function (T) {
+        var p = new T(document, { media: { mediaBaseUrl: "http:\/\/www.bbc.co.uk\/iplayer\/playlist\/", audioCta: "http:\/\/a.files.bbci.co.uk\/s\/kandltimelines\/1274-1\/images\/non-spriteable-images\/audio_normal.png", daxComscore: { appName: 'kandltimelines', appType: 'responsive', counterName: "kl.iwonder.timelines.100_years_of_remembrance_1914_2014.z229kqt.page" } }, rum: { apiKey: "quLMN3gIBktiq4tV3ioMxN51iM0MPqP1", debug: false, server: "http:\/\/data.bbc.co.uk\/v1\/analytics-rum-ingress", labels: { timelineId: "z229kqt", embedded: false } }, allowAdverts: false, clusteringEnabled: true });
+        p.init();
+    });
+</script>
+</body>
+</html>
