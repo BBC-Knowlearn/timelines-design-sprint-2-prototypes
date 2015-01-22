@@ -95,13 +95,19 @@ img.k-tl-p1-drawer--open__close-button {
 
 a.k-tl-p1-drawer--open__event-sign {
 	position: absolute;
-	top: 340px;
+	top: 350px;
 	right: 16px;
 }
 
 /* Timelines Override */
-#zpxttfr, #zqdjjxs, #z2j77ty {
+#zpxttfr,
+#zqdjjxs,
+#z2j77ty {
 	padding-bottom: 100px;
+}
+
+#zynffg8 .k-tl-quote {
+	margin-top: 100px;
 }
 
 
@@ -133,7 +139,8 @@ a.k-tl-p1-drawer--open__event-sign {
 /* To stop the below event SMP player from overlapping */
 .event-2 .k-tl-event-media .emp,
 .event-6 .k-tl-event-media .emp,
-.event-11 .k-tl-event-media .emp {
+.event-11 .k-tl-event-media .emp,
+.event-16 .k-tl-event-media .emp {
 	z-index: 0;
 }
 
