@@ -260,8 +260,6 @@ div.slide {
 	height: 85px;
 	display: block;
 	position: absolute;
-	/*padding-left: 8px;*/
-	border-right: solid 1px #CCC;
 }
 
 div.slide p {
@@ -332,19 +330,41 @@ div.prev {
 }
 
 div.back, div.forward {
+    position: absolute;
 /*margin-top: -22px;*/
+}
+
+div.back {
+    top: 0;
+    left: 0;
+}
+
+div.forward {
+    top: 0;
+    right: 0;
 }
 
 
 div.forward {
-	height: 30px;
-	width: 30px;
-	background-image: url('../../images/embedded-sc93b3e3b6c.png');
+	background-image: url('next_default.png');
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	height: 44px;
 	width: 44px;
-	-webkit-transform: scale(0.5);
+    text-indent: -10000px;
+    top: 55px;
+    right: -38px;
+}
+
+div.back {
+	background-image: url('previous_default.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	height: 44px;
+	width: 44px;
+    text-indent: -10000px;
+    top: 55px;
+    left: -38px;
 }
 
 .previousPage.stuck {
@@ -386,6 +406,7 @@ div.forward {
 	width: 44px;
 }
 
+/*
     div.prev, div.next {
         opacity: 0;
         transition: 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -394,6 +415,7 @@ div.forward {
     div.prev:hover, div.next:hover {
         opacity: 1;
     }
+*/
 
 .previousPage, .nextPage {
     display: none;
@@ -428,6 +450,7 @@ div.forward {
 
 .mini-horizontal {
 	background-color: #333 !important;
+    z-index: 1;
 }
 
 .mini-horizontal-title {
@@ -473,173 +496,6 @@ div.forward {
            </div>
         </div>
      </section>
-
-
-<section id="z9x49j6" class="k-tl-event even event-8">
-Hello
- <div class="prev">
-    <div class="back">Back</div>
-    <div class="forward">Forward</div>
-</div>
-
-<div class="next">
-    <div class="back">Back</div>
-    <div class="forward">Forward</div>
-</div>
-
-</section>
-
-<section id="z9x49j6" class="k-tl-event even event-8 mini-horizontal">
-<div class="k-tl-event-panel no-media">
-<!-- Start Mininav -->
-
-<h3 class="k-tl-event-title k-tl-event-details mini-horizontal-title"><span>Meanwhile...</span></h3>
-
-<div class="h-megabefore b-r b-g-p k-tl-event-details">
-<div class="h-supernav ">
-    <!-- <img src="./iwonder-dark.png" width="100" class="supernav-image"> -->
-    <div class="overflow">
-
-        <div class="container">
-                <div class="slide" style="left: 0px;">
-                    <a href="http://www.bbc.co.uk/timelines/z2njq6f#ztcpn39">
-                    	<img src="http://ichef.bbci.co.uk/images/ic/496xn/p0268zy4.jpg" width="100">
-                        <p class="slide-frame-type">1975</p>
-                        <p class="slide-frame">Fighting for animal rights</p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> This story of British Zoos</p>		
-                    </a>
-                </div>
-
-                <div class="slide">
-                    <a href="http://www.bbc.co.uk/timelines/zyp72hv#zx2k87h">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p0299tt9.jpg">                            
-                        <p class="slide-frame-type">1975</p>
-                        <p class="slide-frame">Salem's Lot: King Gothic</p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> Spine-chillers and suspense: A timeline of Gothic fiction </p>		
-                    </a>
-                </div>
-
-                <div class="slide">
-                    <a href="http://www.bbc.co.uk/timelines/zp7dwmn#zyt2mp3">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p029s3ph.jpg">                            
-                        <p class="slide-frame-type">1975</p>
-                        <p class="slide-frame">The Female Man: Examining gender roles</p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span>Writing the future: A timeline of science fiction literature </p>		
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg">                            
-                        <p class="slide-frame-type"></p>
-                        <p class="slide-frame"></p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> </p>		
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg">                            
-                        <p class="slide-frame-type"></p>
-                        <p class="slide-frame"></p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> </p>		
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg">                            
-                        <p class="slide-frame-type"></p>
-                        <p class="slide-frame"></p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> </p>		
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg">                            
-                        <p class="slide-frame-type"></p>
-                        <p class="slide-frame"></p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> </p>		
-                    </a>
-                </div>
-                <div class="slide">
-                    <a href="">
-                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg">                            
-                        <p class="slide-frame-type"></p>
-                        <p class="slide-frame"></p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span> </p>		
-                    </a>
-                </div>
-            </div>
-    </div>
-</div>
-
-</div>
-
-<script>
-var slides = document.querySelectorAll('.slide'),
-    currentLeft = 0
-    slideWdith = 520;
-
-for ( var i = 0; i < slides.length; i += 1) {
-    slides[i].style.left = currentLeft + 'px';
-    currentLeft = currentLeft += slideWdith;
-}
-
-var buttons = document.querySelectorAll('.button'),
-    container = document.querySelector('.container'),
-    currentLeft = 0;
-    realCurrentLeft = 0;
-
-
-var move = function (moveBy) {
-    container.style.webkitTransform = "translate3d(-" + moveBy + "px, 0px, 0px)";
-}
-document.getElementsByClassName('prev')[0].getElementsByClassName('back')[0].addEventListener('click', function () {
-    realCurrentLeft -= slideWdith;
-    move(realCurrentLeft);
-})
-
-document.getElementsByClassName('next')[0].getElementsByClassName('back')[0].addEventListener('click', function () {
-    realCurrentLeft -= slideWdith;
-    move(realCurrentLeft);
-})
-
-document.getElementsByClassName('prev')[0].getElementsByClassName('forward')[0].addEventListener('click', function () {
-    realCurrentLeft += slideWdith;
-    move(realCurrentLeft);
-})
-
-document.getElementsByClassName('next')[0].getElementsByClassName('forward')[0].addEventListener('click', function () {
-    realCurrentLeft += slideWdith;
-    move(realCurrentLeft);
-})
-
-/* closure loop problem
- http://stackoverflow.com/questions/2568966/how-do-i-pass-the-value-not-the-reference-of-a-js-variable-to-a-function */
-for (var i = 0; i < buttons.length; i += 1) {
-    (function (currentLeft) {
-        buttons[i].addEventListener('click', function () {
-        move(currentLeft);
-        });
-    } )(currentLeft);
-    currentLeft += slideWdith;
-}
-
-var ovrflow = document.getElementsByClassName('overflow')[0];
-var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
-
-document.getElementsByClassName('supernav-image')[0].addEventListener('click', function () {
-
-    ovrflow.classList.toggle('hideSuperNav');
-})
-
-
-</script>
-
-
-
-<!-- End Mininav -->
-</div>
-</section>
-
 
      <section id="zyp8d2p" class="k-tl-event odd event-1">
         <div class="k-tl-event-panel no-media">
@@ -758,6 +614,147 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            </div>
         </div>
      </section>
+
+
+
+<section id="z9x49j6" class="k-tl-event even event-8 mini-horizontal">
+<div class="k-tl-event-panel no-media">
+<!-- Start Mininav -->
+
+
+<h3 class="k-tl-event-title k-tl-event-details mini-horizontal-title"><span>Meanwhile...</span></h3>
+
+<div class="h-megabefore b-r b-g-p k-tl-event-details">
+<div class="h-supernav ">
+    <!-- <img src="./iwonder-dark.png" width="100" class="supernav-image"> -->
+    <div class="overflow">
+
+
+        <div class="container">
+                <div class="slide" style="left: 0px;">
+                    <a href="http://www.bbc.co.uk/timelines/z2njq6f#ztcpn39">
+                    	<img src="http://ichef.bbci.co.uk/images/ic/496xn/p0268zy4.jpg" width="100">
+                        <p class="slide-frame-type">1975</p>
+                        <p class="slide-frame">Fighting for animal rights</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> This story of British Zoos</p>		
+                    </a>
+                </div>
+
+                <div class="slide">
+                    <a href="http://www.bbc.co.uk/timelines/zyp72hv#zx2k87h">
+                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p0299tt9.jpg">                            
+                        <p class="slide-frame-type">1975</p>
+                        <p class="slide-frame">Salem's Lot: King Gothic</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> Spine-chillers and suspense: A timeline of Gothic fiction </p>		
+                    </a>
+                </div>
+
+                <div class="slide">
+                    <a href="http://www.bbc.co.uk/timelines/zp7dwmn#zyt2mp3">
+                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p029s3ph.jpg">                            
+                        <p class="slide-frame-type">1975</p>
+                        <p class="slide-frame">The Female Man: Examining gender roles</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span>Writing the future: A timeline of science fiction literature </p>		
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="http://www.bbc.co.uk/timelines/zp7dwmn#z3n6tfr">
+                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p029rt0j.jpg">                            
+                        <p class="slide-frame-type">1979</p>
+                        <p class="slide-frame">The Hitchhiker's Guide to the Galaxy: Laughing in space</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> Writing the future: A timeline of science fiction literature </p>		
+                    </a>
+                </div>
+            </div>
+
+    </div>
+
+     <div class="prev">
+        <div class="back">Back</div>
+        <div style="display:none;"class="forward">Forward</div>
+    </div>
+    <div class="next">
+        <div style="display:none"class="back">Back</div>
+        <div class="forward">Forward</div>
+    </div>
+
+</div>
+
+</div>
+
+<script>
+var slides = document.querySelectorAll('.slide'),
+    currentLeft = 0
+    slideWdith = 520;
+
+for ( var i = 0; i < slides.length; i += 1) {
+    slides[i].style.left = currentLeft + 'px';
+    currentLeft = currentLeft += slideWdith;
+}
+
+var buttons = document.querySelectorAll('.button'),
+    container = document.querySelector('.container'),
+    currentLeft = 0;
+    realCurrentLeft = 0;
+
+
+var move = function (moveBy) {
+    container.style.webkitTransform = "translate3d(-" + moveBy + "px, 0px, 0px)";
+}
+document.getElementsByClassName('prev')[0].getElementsByClassName('back')[0].addEventListener('click', function () {
+    realCurrentLeft -= slideWdith;
+    move(realCurrentLeft);
+})
+
+document.getElementsByClassName('next')[0].getElementsByClassName('back')[0].addEventListener('click', function () {
+    realCurrentLeft -= slideWdith;
+    move(realCurrentLeft);
+})
+
+document.getElementsByClassName('prev')[0].getElementsByClassName('forward')[0].addEventListener('click', function () {
+    realCurrentLeft += slideWdith;
+    move(realCurrentLeft);
+})
+
+document.getElementsByClassName('next')[0].getElementsByClassName('forward')[0].addEventListener('click', function () {
+    realCurrentLeft += slideWdith;
+    move(realCurrentLeft);
+})
+
+/* closure loop problem
+ http://stackoverflow.com/questions/2568966/how-do-i-pass-the-value-not-the-reference-of-a-js-variable-to-a-function */
+for (var i = 0; i < buttons.length; i += 1) {
+    (function (currentLeft) {
+        buttons[i].addEventListener('click', function () {
+        move(currentLeft);
+        });
+    } )(currentLeft);
+    currentLeft += slideWdith;
+}
+
+var ovrflow = document.getElementsByClassName('overflow')[0];
+var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
+
+document.getElementsByClassName('supernav-image')[0].addEventListener('click', function () {
+
+    ovrflow.classList.toggle('hideSuperNav');
+})
+
+
+</script>
+
+
+
+<!-- End Mininav -->
+</div>
+</section>
+
+
+
+
+
+
+
      <section id="z869kqt" class="k-tl-event even event-6">
         <div class="k-tl-event-panel no-media">
            <h2 class="k-tl-event-date-description"><span>27 August 1979</span></h2>
@@ -818,65 +815,13 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
 
 
      </section>
-     <section id="z9x49j6" class="k-tl-event even event-8">
-        <div class="k-tl-event-panel no-media">
 
 <div id="widget">
 <div class="top-shadow"></div>
 <div class="inner">
 	<!-- <h3>Meanwhile...</h3> -->
 <!-- 		<h3>Meanwhile March 1981 - 16 October 1984</h3> -->
-	<h3 class="widget-title">March 1981 - 16 October 1984<br/>Elsewhere from iWonder </h3>
-	<div class="promo-container">
-		<div class="promo">
-			<div class="primary">
-				<p><span class="date-box">June - July 1982</span></p>
-				<img src="http://ichef.bbci.co.uk/images/ic/640x360/p0212hqf.jpg" width="100%" class="widget-img"/>
-				<p><span class="event-title">Spain</span> <span class="from">from</span> <span class="timeline-title">The story of the Fifa World Cup</span></p>
-			</div>
-			<div class="secondary">
-				<span class="date-box">June - July 1982</span>
-				<p>For the 1982 tournament in Spain, the World Cup finals expanded from 16 to 24 teams. The larger finals let more teams from Africa and Asia qualify.</p>
-				<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
-			</div>
-		</div>
-		<div class="promo">
-			<div class="primary">
-				<p><span class="date-box">1984</span></p>
-				<img src="http://ichef.bbci.co.uk/images/ic/640x360/p028vfb2.jpg" width="100%" class="widget-img"/>
-				<p><span class="event-title">Computer-aided design: the birth of digital creativity</span> <span class="from">from</span> <span class="timeline-title">How the world came to be run by computer code</span></p>
-			</div>
-			<div class="secondary">
-				<span class="date-box">1984</span>
-				<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
-				<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
-			</div>
-		</div>
-		<div class="promo">
-			<div class="primary">
-				<p><span class="date-box">October 1984</span></p>
-				<img src="http://ichef.bbci.co.uk/images/ic/496xn/p02b2bnh.jpg" width="100%" class="widget-img"/>
-				<p><span class="event-title">Indira Gandhi</span> <span class="from">from</span> <span class="timeline-title">The Gurus and warriors of the Sikh kingdom</span></p>
-			</div>
-			<div class="secondary">
-				<span class="date-box">October 1984</span>
-				<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
-				<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="bottom-shadow"></div>
-</div>
-        </div>
-     </section>
-
-<div id="widget">
-<div class="top-shadow"></div>
-<div class="inner">
-	<!-- <h3>Meanwhile...</h3> -->
-<!-- 		<h3>Meanwhile March 1981 - 16 October 1984</h3> -->
-	<h3 class="widget-title">March 1981 - 16 October 1984<br/>Elsewhere from iWonder </h3>
+	<h3 class="widget-title">Meanwhile...</h3>
 	<div class="promo-container">
 		<div class="promo">
 			<div class="primary">
