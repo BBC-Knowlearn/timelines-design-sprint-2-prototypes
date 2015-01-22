@@ -70,9 +70,18 @@ img.k-tl-p1-drawer--open__event-date {
 
 img.k-tl-p1-drawer--open__close-button {
 	position: absolute;
-	bottom: 16px;
-	left: 16px;
+	left: 20px;
+	bottom: 20px;
 	cursor: pointer;
+}
+
+@media (max-width: 1030px) {
+	img.k-tl-p1-drawer--open__close-button {
+		position: absolute;
+		top: 480px;
+		left: 20px;
+		cursor: pointer;
+	}
 }
 
 a.k-tl-p1-drawer--open__event-sign {

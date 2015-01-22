@@ -4,7 +4,6 @@ $(function() {
 	$('.k-tl-p1-drawer--open__wrapper').hide();
 
 	$('.k-tl-p1-drawer--open__close-button').click(function(event) {
-	console.log(previousEvent);
 		if (previousEvent !== "close") {
 			var buttonId = event.target.id;
 			var selectorForOpenDrawer = 'div#' + buttonId + ".k-tl-p1-drawer--open__wrapper";
@@ -22,11 +21,15 @@ $(function() {
 	});
 
 	$('.k-tl-p1-drawer--closed').click(function(event) {
-		console.log(previousEvent);
 		if (previousEvent !== "open") {
 			var hookId = event.target.id;
 			var selectorForOpenDrawer = 'div#' + hookId + ".k-tl-p1-drawer--open__wrapper";
 			var selectorForClosedDrawer = 'div#' + hookId + ".k-tl-p1-drawer--closed";
+			var currentEventPid = $(this).data('id-pid');
+
+			// Ensure the top of the event is in view for iPad
+			var valueToScroll = $("section#" + currentEventPid).offset().top;
+			$("html, body").scrollTop(valueToScroll - 120);
 
 			if ($(selectorForClosedDrawer).is(":visible")) {
 				previousEvent = "open";
