@@ -100,14 +100,10 @@ a.k-tl-p1-drawer--open__event-sign {
 }
 
 /* Timelines Override */
-
-#zpxttfr {
+#zpxttfr, #zqdjjxs, #z2j77ty {
 	padding-bottom: 100px;
 }
 
-#zqdjjxs {
-	padding-bottom: 100px;
-}
 
 @media (min-width: 1008px) {
 	.k-tl-event-media {
@@ -136,7 +132,8 @@ a.k-tl-p1-drawer--open__event-sign {
 
 /* To stop the below event SMP player from overlapping */
 .event-2 .k-tl-event-media .emp,
-.event-6 .k-tl-event-media .emp {
+.event-6 .k-tl-event-media .emp,
+.event-11 .k-tl-event-media .emp {
 	z-index: 0;
 }
 
