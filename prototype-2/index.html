@@ -33,7 +33,7 @@ if (document.domain.indexOf('bbc.co.uk') > -1) {
 
 
 <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
-<meta name="description" content="Peter Taylor examines the IRA’s journey from their 1969 split to the 1994 ceasefire with archive from his 1997 TV series Provos: The IRA and Sinn Fein">
+<meta name="description" content="Peter Taylor examines the IRA's journey from their 1969 split to the 1994 ceasefire with archive from his 1997 TV series Provos: The IRA and Sinn Fein">
 <meta name="DCTERMS.created" content="2014-08-29">
 <meta name="DCTERMS.modified" content="2014-09-01">
 <meta name="DCTERMS.temporal" content="name=The IRA: From conflict to ceasefire; start=2014-08-13; end=;">
@@ -47,7 +47,7 @@ if (document.domain.indexOf('bbc.co.uk') > -1) {
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The IRA: From conflict to ceasefire">
 <meta name="twitter:description"
-content="Peter Taylor examines the IRA’s journey from their 1969 split to the 1994 ceasefire with archive from his 1997 TV series Provos: The IRA and Sinn Fein">
+content="Peter Taylor examines the IRA's journey from their 1969 split to the 1994 ceasefire with archive from his 1997 TV series Provos: The IRA and Sinn Fein">
 <meta name="twitter:image:src" content="http://ichef.bbci.co.uk/images/ic/288x162/p025kc2s.jpg">
 <meta name="twitter:site" content="@BBCiWonder">
 
@@ -84,7 +84,7 @@ content="Peter Taylor examines the IRA’s journey from their 1969 split to the 
                  <li class="k-tl-navigation__item event-4" data-start-date-time="1974-11-21 "><a class="k-tl-navigation__link" href="#zpbx6sg" tabindex="-1"><span class="k-tl-navigation__tooltip">21 November 1974</span><span class="k-tl-navigation__indicator">Birmingham pub bombings</span></a></li>
                  <li class="k-tl-navigation__item event-5" data-start-date-time="1974-12-22 "><a class="k-tl-navigation__link" href="#zxy72hv" tabindex="-1"><span class="k-tl-navigation__tooltip">22 December 1974</span><span class="k-tl-navigation__indicator">IRA ceasefire and truce</span></a></li>
                  <li class="k-tl-navigation__item event-6" data-start-date-time="1979-08-27 "><a class="k-tl-navigation__link" href="#z869kqt" tabindex="-1"><span class="k-tl-navigation__tooltip">27 August 1979</span><span class="k-tl-navigation__indicator">The Warrenpoint bombing </span></a></li>
-                 <li class="k-tl-navigation__item event-7" data-start-date-time="1981-03-01 "><a class="k-tl-navigation__link" href="#zprthyc" tabindex="-1"><span class="k-tl-navigation__tooltip">1 March 1981</span><span class="k-tl-navigation__indicator">Hunger strike and Bobby Sands’ election</span></a></li>
+                 <li class="k-tl-navigation__item event-7" data-start-date-time="1981-03-01 "><a class="k-tl-navigation__link" href="#zprthyc" tabindex="-1"><span class="k-tl-navigation__tooltip">1 March 1981</span><span class="k-tl-navigation__indicator">Hunger strike and Bobby Sands' election</span></a></li>
                  <li class="k-tl-navigation__item event-8" data-start-date-time="1984-10-16 "><a class="k-tl-navigation__link" href="#z9x49j6" tabindex="-1"><span class="k-tl-navigation__tooltip">16 October 1984</span><span class="k-tl-navigation__indicator">Brighton bombing</span></a></li>
                  <li class="k-tl-navigation__item event-9" data-start-date-time="1985-11-15 "><a class="k-tl-navigation__link" href="#zpchpv4" tabindex="-1"><span class="k-tl-navigation__tooltip">15 November 1985</span><span class="k-tl-navigation__indicator">Anglo-Irish Agreement</span></a></li>
                  <li class="k-tl-navigation__item event-10" data-start-date-time="1987-05-08 "><a class="k-tl-navigation__link" href="#zs9nsbk" tabindex="-1"><span class="k-tl-navigation__tooltip">8 May 1987</span><span class="k-tl-navigation__indicator">The Loughgall ambush</span></a></li>
@@ -171,8 +171,6 @@ font-size: 12pt;
 color: #666;
 }
 
-.promo-container {
-}
 .promo {
 vertical-align: top;
 display: inline-block;
@@ -243,35 +241,36 @@ div.h-supernav h1 {
 	font-weight: bold;
 }
 
-.overflow {
+.overflow,
+.overflow_two {
 	width: 100%;
 	height: 146px;
 	overflow: hidden;
 	position: relative;
 }
 
-.container {
+.container,
+.container_two {
 	-webkit-transition: 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 	transition: 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
-div.slide {
+div.slide ,
+div.slide_two {
 	width: 520px;
 	height: 85px;
 	display: block;
 	position: absolute;
 }
 
-div.slide p {
+div.slide p ,
+div.slide_two p {
 	color: #333;
 }
 
-div.slide:hover {
-	/*background-color: #F1F1EF;*/
-}
-
 /* line 56, /Users/harrim28/workspace/kandltimelines/app/assets/scss/components/_supernav.scss */
-div.slide img {
+div.slide img ,
+div.slide_two img {
 	width: 260px;
 	float: left;
 }
@@ -292,32 +291,15 @@ p.slide-frame {
 	font-size: 1.6em;
 }
 
-div.slide p.slide-frame-type {
+div.slide p.slide-frame-type ,
+div.slide_two p.slide-frame-type {
 	padding: 8px;
 	background-color: #00a030;
 	font-size: 1.2rem;
 }
 
-
-/*div.slide:first-child {
-	background-color: #F1F1EE;
-}
-div.slide:first-child p.slide-frame-type {
-	border-bottom: solid 1px #333333;
-}
-div.slide:first-child p {
-color: #333333;
-}*/
-
-div.slide:hover {
-	/*background-color: rgba(10, 88, 105, 0.9);*/
-}
-
-div.slide:hover p.slide-frame-type {
-
-}
-
-div.slide p {
+div.slide p ,
+div.slide_two p {
 	color: white;
 }
 
@@ -325,27 +307,30 @@ div.slide p {
 	display: inline-block;
 }
 
-div.prev {
+div.prev ,
+div.prev_two {
 	left: 0;
 }
 
-div.back, div.forward {
+div.back, div.forward,
+div.back_two, div.forward_two {
     position: absolute;
-/*margin-top: -22px;*/
 }
 
-div.back {
+div.back,
+div.back_two {
     top: 0;
     left: 0;
 }
 
-div.forward {
+div.forward,
+div.forward_two {
     top: 0;
     right: 0;
 }
 
-
-div.forward {
+div.forward,
+div.forward_two {
 	background-image: url('next_default.png');
 	background-position: 0 0;
 	background-repeat: no-repeat;
@@ -356,7 +341,8 @@ div.forward {
     right: -38px;
 }
 
-div.back {
+div.back,
+div.back_two {
 	background-image: url('previous_default.png');
 	background-position: 0 0;
 	background-repeat: no-repeat;
@@ -406,17 +392,6 @@ div.back {
 	width: 44px;
 }
 
-/*
-    div.prev, div.next {
-        opacity: 0;
-        transition: 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    }
-
-    div.prev:hover, div.next:hover {
-        opacity: 1;
-    }
-*/
-
 .previousPage, .nextPage {
     display: none;
 }
@@ -440,13 +415,6 @@ div.back {
     z-index: 2;
 }
 
-.previousPage.stuck:hover, .nextPage.stuck:hover {
-    /*display: block;*/
-}
-
-.hideSuperNav {
-    display: none;
-}
 
 .mini-horizontal {
 	background-color: #333 !important;
@@ -466,10 +434,6 @@ div.back {
 
 .slide-frame-from span {
 	color: #CCC;
-}
-
-.emp-wrapper img {
-	width: 100%;
 }
 
 </style>
@@ -495,8 +459,8 @@ div.back {
            </div>
            <div class="k-tl-introduction">
               <h2 class="k-tl-introduction-title">Born again</h2>
-              <p class="k-tl-introduction-standfirst">In 1969 Northern Ireland’s Catholics began to demand civil rights, a concept being made universal at the time by Martin Luther King in the US. Protestants resisted and attacked some Catholic areas of the province. </p>
-              <p class="k-tl-introduction-body-text">When the 'old' IRA that had fought to obtain independence in Ireland’s War of Independence failed to defend these Catholic enclaves - the handful of IRA men who rushed to their defence forged a split in the movement and founded the Provisional IRA.</p>
+              <p class="k-tl-introduction-standfirst">In 1969 Northern Ireland's Catholics began to demand civil rights, a concept being made universal at the time by Martin Luther King in the US. Protestants resisted and attacked some Catholic areas of the province. </p>
+              <p class="k-tl-introduction-body-text">When the 'old' IRA that had fought to obtain independence in Ireland's War of Independence failed to defend these Catholic enclaves - the handful of IRA men who rushed to their defence forged a split in the movement and founded the Provisional IRA.</p>
            </div>
         </div>
      </section>
@@ -508,8 +472,8 @@ div.back {
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div>
-                       <img src="http://ichef.bbci.co.uk/images/ic/496x279/p025pp72.jpg" alt="">
+                    <div  data-pid="p0258srv" data-version-pid="p0258srx" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025pp72.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025pp72.jpg" alt=""></div>
                     </div>
                  </div>
                  <div class="k-tl-caption">
@@ -529,8 +493,8 @@ div.back {
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div>
-                       <img src="http://ichef.bbci.co.uk/images/ic/496x279/p0258s4j.jpg" alt="">
+                    <div  data-pid="p0258tl8" data-version-pid="p0258tlk" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p0258s4j.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p0258s4j.jpg" alt=""></div>
                     </div>
                  </div>
                  <div class="k-tl-caption">
@@ -549,8 +513,8 @@ div.back {
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div>
-                       <img src="http://ichef.bbci.co.uk/images/ic/496x279/p025h4hh.jpg" alt="">
+                    <div  data-pid="p025h5n0" data-version-pid="p025h5n4" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025h4hh.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025h4hh.jpg" alt=""></div>
                     </div>
                  </div>
                  <div class="k-tl-caption">
@@ -570,14 +534,16 @@ div.back {
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hc10.jpg" alt=""></div>
+                    <div  data-pid="p025hc54" data-version-pid="p025hc5g" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025hc10.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hc10.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">The IRA extend their campaign to England, culminating in explosions killing 19 people in two Birmingham pubs</p>
                  </div>
               </div>
               <p class="k-tl-event-standfirst">While the shooting and bombing continued relentlessly at home the IRA had already started to extend its campaign to England.</p>
-              <p class="k-tl-event-body-text">It targeted pubs frequented by off-duty soldiers. Bombs in Guilford and Woolwich killed 6 people and injured many more. This new campaign was to have a horrific climax when bombs went off without warning in two Birmingham pubs – 19 people were killed and 182 were injured.  Britain was shocked at the carnage and the way in which the ‘war’ in Northern Ireland was being brought home with such savage ferocity.</p>
+              <p class="k-tl-event-body-text">It targeted pubs frequented by off-duty soldiers. Bombs in Guilford and Woolwich killed 6 people and injured many more. This new campaign was to have a horrific climax when bombs went off without warning in two Birmingham pubs – 19 people were killed and 182 were injured.  Britain was shocked at the carnage and the way in which the ‘war' in Northern Ireland was being brought home with such savage ferocity.</p>
            </div>
         </div>
      </section>
@@ -588,33 +554,32 @@ div.back {
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hd6h.jpg" alt=""></div>
+                    <div  data-pid="p025lh48" data-version-pid="p025lh4b" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025hd6h.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hd6h.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">The IRA ended their ceasefire of 1975 after concluding that the British had no intention of withdrawing</p>
                  </div>
               </div>
-              <p class="k-tl-event-standfirst">The IRA issued a statement ordering ‘a suspension of operations’ from midnight on Thursday 22 December 1974 until midnight, 2 January 1975.</p>
-              <p class="k-tl-event-body-text">The ceasefire was the result of ongoing secret discussions between IRA leaders and the British. Despite the ceasefire ending, the British still wanted to talk to the IRA about a bilateral truce. With the truce ‘tacked down’ the IRA issued a statement on 8 February 1975 announcing a new ceasefire. However a month into the truce the IRA was not satisfied with progress and told their representatives to give the British the ominous warning that ‘we achieve more in wartime than in peacetime’.</p>
+              <p class="k-tl-event-standfirst">The IRA issued a statement ordering ‘a suspension of operations' from midnight on Thursday 22 December 1974 until midnight, 2 January 1975.</p>
+              <p class="k-tl-event-body-text">The ceasefire was the result of ongoing secret discussions between IRA leaders and the British. Despite the ceasefire ending, the British still wanted to talk to the IRA about a bilateral truce. With the truce ‘tacked down' the IRA issued a statement on 8 February 1975 announcing a new ceasefire. However a month into the truce the IRA was not satisfied with progress and told their representatives to give the British the ominous warning that ‘we achieve more in wartime than in peacetime'.</p>
            </div>
         </div>
      </section>
 
 
 
+
+
+
 <section id="z9x49j6" class="k-tl-event even event-8 mini-horizontal">
 <div class="k-tl-event-panel no-media">
 <!-- Start Mininav -->
-
-
 <h3 class="k-tl-event-title k-tl-event-details mini-horizontal-title"><span>Meanwhile...</span></h3>
-
 <div class="h-megabefore b-r b-g-p k-tl-event-details">
 <div class="h-supernav ">
-    <!-- <img src="./iwonder-dark.png" width="100" class="supernav-image"> -->
     <div class="overflow">
-
-
         <div class="container">
                 <div class="slide" style="left: 0px;">
                     <a href="http://www.bbc.co.uk/timelines/z2njq6f#ztcpn39">
@@ -624,7 +589,6 @@ div.back {
                         <p class="slide-frame slide-frame-from"><span>From:</span> This story of British Zoos</p>		
                     </a>
                 </div>
-
                 <div class="slide">
                     <a href="http://www.bbc.co.uk/timelines/zyp72hv#zx2k87h">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p0299tt9.jpg">                            
@@ -633,7 +597,6 @@ div.back {
                         <p class="slide-frame slide-frame-from"><span>From:</span> Spine-chillers and suspense: A timeline of Gothic fiction </p>		
                     </a>
                 </div>
-
                 <div class="slide">
                     <a href="http://www.bbc.co.uk/timelines/zp7dwmn#zyt2mp3">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p029s3ph.jpg">                            
@@ -651,9 +614,7 @@ div.back {
                     </a>
                 </div>
             </div>
-
     </div>
-
      <div class="prev">
         <div class="back">Back</div>
         <div style="display:none;"class="forward">Forward</div>
@@ -662,16 +623,12 @@ div.back {
         <div style="display:none"class="back">Back</div>
         <div class="forward">Forward</div>
     </div>
-
 </div>
-
 </div>
-
 <script>
 var slides = document.querySelectorAll('.slide'),
     currentLeft = 0
     slideWdith = 520;
-
 for ( var i = 0; i < slides.length; i += 1) {
     slides[i].style.left = currentLeft + 'px';
     currentLeft = currentLeft += slideWdith;
@@ -720,22 +677,10 @@ for (var i = 0; i < buttons.length; i += 1) {
 var ovrflow = document.getElementsByClassName('overflow')[0];
 var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
 
-document.getElementsByClassName('supernav-image')[0].addEventListener('click', function () {
-
-    ovrflow.classList.toggle('hideSuperNav');
-})
-
-
 </script>
-
-
-
 <!-- End Mininav -->
 </div>
 </section>
-
-
-
 
 
 
@@ -747,13 +692,15 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hj9d.jpg" alt=""></div>
+                    <div  data-pid="p025lpp4" data-version-pid="p025lpp9" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025hj9d.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hj9d.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">The IRA reorganise, killing 18 soldiers in Warrenpoint and assassinating Lord Mountbatten on the same day</p>
                  </div>
               </div>
-              <p class="k-tl-event-standfirst">Towards the end of 1978 Brigadier James Glover produced one of the MOD’s most prescient papers warning about IRA ‘spectaculars’.</p>
+              <p class="k-tl-event-standfirst">Towards the end of 1978 Brigadier James Glover produced one of the MOD's most prescient papers warning about IRA ‘spectaculars'.</p>
               <p class="k-tl-event-body-text">The following summer his prophesy came true when the IRA dealt the British a double blow. They ambushed an army convoy travelling between Newry and Warrenpoint, detonating two huge remote controlled bombs. They left 18 soldiers dead, 16 of them members of the Parachute Regiment. Just a few hours before, they had exploded another bomb killing Lord Mountbatten and three others at Mullaghmore in County Sligo in the Republic of Ireland.</p>
               <a class="k-tl-event-external-link" href="http://news.bbc.co.uk/1/hi/northern_ireland/8225388.stm">Remembering Narrow Water<span></span></a>
            </div>
@@ -762,18 +709,20 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
      <section id="zprthyc" class="k-tl-event odd event-7">
         <div class="k-tl-event-panel no-media">
            <h2 class="k-tl-event-date-description"><span>1 March 1981</span></h2>
-           <h3 class="k-tl-event-title"><span>Hunger strike and Bobby Sands’ election</span></h3>
+           <h3 class="k-tl-event-title"><span>Hunger strike and Bobby Sands' election</span></h3>
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025k31l.jpg" alt=""></div>
+                    <div  data-pid="p025k342" data-version-pid="p025k344" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025k31l.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025k31l.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text"> IRA hunger striker Bobby Sands is elected as an MP. He later dies with the British government refusing to grant IRA prisoners political status</p>
                  </div>
               </div>
               <p class="k-tl-event-standfirst">In 1980, after a hunger strike with an unsatisfactory conclusion - a second was scheduled for 1 March 1981. Bobby Sands was the first to refuse food.</p>
-              <p class="k-tl-event-body-text">Five days after Sands started the hunger strike, the MP for Fermanagh-South Tyrone died and the republican movement decided to run Bobby Sands as a candidate in the by-election. Held on the 40th day of Sands’ hunger strike, the turn-out was an astonishing 86.9% and he beat his nearest rival by 1500 votes. An IRA prisoner and hunger striker had been elected to Westminster.</p>
+              <p class="k-tl-event-body-text">Five days after Sands started the hunger strike, the MP for Fermanagh-South Tyrone died and the republican movement decided to run Bobby Sands as a candidate in the by-election. Held on the 40th day of Sands' hunger strike, the turn-out was an astonishing 86.9% and he beat his nearest rival by 1500 votes. An IRA prisoner and hunger striker had been elected to Westminster.</p>
               <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/events/republican_hunger_strikes_maze">Republican hunger strikes in the Maze prison<span></span></a>
            </div>
         </div>
@@ -794,8 +743,6 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
 <div id="widget">
 <div class="top-shadow"></div>
 <div class="inner">
-	<!-- <h3>Meanwhile...</h3> -->
-<!-- 		<h3>Meanwhile March 1981 - 16 October 1984</h3> -->
 	<h3 class="widget-title">Meanwhile...</h3>
 	<div class="promo-container">
 		<div class="promo">
@@ -847,14 +794,16 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025k368.jpg" alt=""></div>
+                    <div  data-pid="p025k3p5" data-version-pid="p025k3p7" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025k368.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025k368.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
-                    <p class="k-tl-caption-text">The IRA bomb the Grand Hotel in Brighton during the Conservative Party’s annual conference, killing five people</p>
+                    <p class="k-tl-caption-text">The IRA bomb the Grand Hotel in Brighton during the Conservative Party's annual conference, killing five people</p>
                  </div>
               </div>
               <p class="k-tl-event-standfirst">The IRA struck one of the most devastating blows in its history when it almost wiped out Mrs Thatcher and her cabinet.</p>
-              <p class="k-tl-event-body-text">Mrs Thatcher and her cabinet had gathered at the Grand Hotel in Brighton for the Conservative Party’s annual conference. At 2.45 am on 16 October 1984, a 20 lb bomb on a three month timer, strategically placed behind a bath panel in Room 629, exploded killing 5 members of the Conservative Party and injuring more than thirty people, many of them seriously.  Mrs Thatcher insisted it was business as usual and addressed the conference as planned, receiving an eight minute standing ovation.</p>
+              <p class="k-tl-event-body-text">Mrs Thatcher and her cabinet had gathered at the Grand Hotel in Brighton for the Conservative Party's annual conference. At 2.45 am on 16 October 1984, a 20 lb bomb on a three month timer, strategically placed behind a bath panel in Room 629, exploded killing 5 members of the Conservative Party and injuring more than thirty people, many of them seriously.  Mrs Thatcher insisted it was business as usual and addressed the conference as planned, receiving an eight minute standing ovation.</p>
               <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/uk-northern-ireland-25576164">IRA Brighton bomb slowed British-Irish peace talks<span></span></a>
            </div>
         </div>
@@ -878,13 +827,15 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hmc9.jpg" alt=""></div>
+                    <div  data-pid="p025jz11" data-version-pid="p025jz13" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025hmc9.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hmc9.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
-                    <p class="k-tl-caption-text">After Sinn Fein’s electoral success in 1985, the Anglo-Irish Agreement is signed in an attempt to stop their rise</p>
+                    <p class="k-tl-caption-text">After Sinn Fein's electoral success in 1985, the Anglo-Irish Agreement is signed in an attempt to stop their rise</p>
                  </div>
               </div>
-              <p class="k-tl-event-standfirst">Sinn Fein’s dramatic political rise was causing alarm bells not just among their political opponents but within the British government.</p>
+              <p class="k-tl-event-standfirst">Sinn Fein's dramatic political rise was causing alarm bells not just among their political opponents but within the British government.</p>
               <p class="k-tl-event-body-text">In response the British Government came up with a new strategy of trying to marginalise Sinn Fein whilst boosting the SDLP – the representatives of constitutional nationalism – and by enlisting the help of the Dublin government. The Agreement signed by Mrs Thatcher and the Irish Taoiseach Garret Fitzgerald at Hillsborough Castle redirected the political axis from London-Belfast to London-Dublin and for the first time gave Dublin a say in the affairs of Northern Ireland.</p>
            </div>
         </div>
@@ -896,14 +847,16 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hn6k.jpg" alt=""></div>
+                    <div  data-pid="p025lq28" data-version-pid="p025lq2c" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025hn6k.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025hn6k.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
-                    <p class="k-tl-caption-text">The SAS kill eight IRA members when they ambush the unit’s attempts to drive a bomb into Loughall police station</p>
+                    <p class="k-tl-caption-text">The SAS kill eight IRA members when they ambush the unit's attempts to drive a bomb into Loughall police station</p>
                  </div>
               </div>
-              <p class="k-tl-event-standfirst">The IRA’s biggest loss in modern times - eight of the IRA’s Tyrone brigade were killed in an SAS ambush at the police station in Loughgall.</p>
-              <p class="k-tl-event-body-text">By the mid-80s the IRA had entered a new phase in their war against the British, on the military as well as the political front. The heavy weaponry they believed was necessary to deal the British a ‘decisive blow’ had arrived in a huge arsenal -  a present from Libya’s Colonel Gaddafi. The bombing of Loughgall’s police station was to be a carbon copy of the attack on The Birches station. But this time British Intelligence knew about the plan and the SAS were lying in wait.</p>
+              <p class="k-tl-event-standfirst">The IRA's biggest loss in modern times - eight of the IRA's Tyrone brigade were killed in an SAS ambush at the police station in Loughgall.</p>
+              <p class="k-tl-event-body-text">By the mid-80s the IRA had entered a new phase in their war against the British, on the military as well as the political front. The heavy weaponry they believed was necessary to deal the British a ‘decisive blow' had arrived in a huge arsenal -  a present from Libya's Colonel Gaddafi. The bombing of Loughgall's police station was to be a carbon copy of the attack on The Birches station. But this time British Intelligence knew about the plan and the SAS were lying in wait.</p>
            </div>
         </div>
         <div class="k-tl-quote">
@@ -924,14 +877,16 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025z2tt.jpg" alt=""></div>
+                    <div  data-pid="p025k9bs" data-version-pid="p025k9c0" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025z2tt.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025z2tt.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">Gerry Adams leads Sinn Fein towards a peace strategy</p>
                  </div>
               </div>
               <p class="k-tl-event-standfirst">As people gathered at the Enniskillen war memorial to commemorate Remembrance Sunday a bomb exploded killing 11 people and injuring 63.</p>
-              <p class="k-tl-event-body-text">The IRA’s intention had been to detonate the bomb and kill members of the security forces as they carried out a security sweep before the service but it exploded before the sweep killing civilians.  The IRA issued a statement of ‘deep regret’ with Gerry Adams declaring that the Republican movement could not withstand another Enniskillen.</p>
+              <p class="k-tl-event-body-text">The IRA's intention had been to detonate the bomb and kill members of the security forces as they carried out a security sweep before the service but it exploded before the sweep killing civilians.  The IRA issued a statement of ‘deep regret' with Gerry Adams declaring that the Republican movement could not withstand another Enniskillen.</p>
            </div>
         </div>
      </section>
@@ -942,18 +897,130 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025pnz7.jpg" alt=""></div>
+                    <div  data-pid="p025lvkd" data-version-pid="p025lvkg" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025pnz7.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025pnz7.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">Three of the darkest events of the Troubles take place within a fortnight, triggering events that ironically accelerate moves towards peace</p>
                  </div>
               </div>
-              <p class="k-tl-event-standfirst">Three members of the IRA were shot dead ‘on active service’ by the SAS in Gibraltar and their killings triggered an astonishing series of events.</p>
-              <p class="k-tl-event-body-text">At the burial of the three IRA members a man attacked the crowd, killing three mourners. Three days later at one of the victim’s funerals, a car suddenly drove towards the cortege. Fearing a repetition of the previous attack, the crowd surrounded the car and one of the British army corporals inside fired a warning shot. The corporals were taken away and shot. People were horrified and called for the killing to stop – these 14 days were one of the catalysts for the subsequent ‘peace process’.</p>
+              <p class="k-tl-event-standfirst">Three members of the IRA were shot dead 'on active service' by the SAS in Gibraltar and their killings triggered an astonishing series of events.</p>
+              <p class="k-tl-event-body-text">At the burial of the three IRA members a man attacked the crowd, killing three mourners. Three days later at one of the victim'gs funerals, a car suddenly drove towards the cortege. Fearing a repetition of the previous attack, the crowd surrounded the car and one of the British army corporals inside fired a warning shot. The corporals were taken away and shot. People were horrified and called for the killing to stop - these 14 days were one of the catalysts for the subsequent 'peace process'.</p>
               <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/events/three_ira_members_shot_dead_in_gibraltar">Three IRA members shot dead in Gibraltar<span></span></a><a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/events/michael_stone_kills_three_at_ira_funerals">Michael Stone kills three at IRA funerals<span></span></a><a class="k-tl-event-external-link" href="http://www.bbc.co.uk/history/events/army_corporals_killed_at_ira_funeral">Army corporals killed at IRA funeral<span></span></a>
            </div>
         </div>
      </section>
+
+
+
+
+
+<section id="z9x49j6" class="k-tl-event even event-8 mini-horizontal">
+<div class="k-tl-event-panel no-media">
+<!-- Start Mininav -->
+<h3 class="k-tl-event-title k-tl-event-details mini-horizontal-title"><span>Meanwhile...</span></h3>
+<div class="h-megabefore b-r b-g-p k-tl-event-details">
+<div class="h-supernav ">
+    <!-- <img src="./iwonder-dark.png" width="100" class="supernav-image"> -->
+    <div class="overflow_two">
+        <div class="container_two">
+                <div class="slide_two" style="left: 0px;">
+                    <a href="http://www.bbc.co.uk/timelines/zp2mmp3#z9rccdm">
+                    	<img src="http://ichef.bbci.co.uk/images/ic/496xn/p020ty9f.jpg" width="100">
+                        <p class="slide-frame-type">June - July 1990</p>
+                        <p class="slide-frame">Italy</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> The story of the Fifa World Cup</p>		
+                    </a>
+                </div>
+                <div class="slide_two">
+                    <a href="http://www.bbc.co.uk/timelines/z2njq6f#zqf72hv">
+                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p0269bq5.jpg">                            
+                        <p class="slide-frame-type">1991</p>
+                        <p class="slide-frame">London Zoo almost closes</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> The story of British zoos </p>		
+                    </a>
+                </div>
+                <div class="slide_two">
+                    <a href="http://www.bbc.co.uk/timelines/ztrpn39#zy249j6">
+                        <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p026qzcw.jpg">                            
+                        <p class="slide-frame-type">1989</p>
+                        <p class="slide-frame">The Claim of Right</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> Scotland's road to referendum</p>		
+                    </a>
+                </div>
+            </div>
+    </div>
+     <div class="prev_two">
+        <div class="back_two">Back</div>
+        <div style="display:none;"class="forward_two">Forward</div>
+    </div>
+    <div class="next_two">
+        <div style="display:none" class="back_two">Back</div>
+        <div class="forward_two">Forward</div>
+    </div>
+</div>
+</div>
+<script>
+var slides_two = document.querySelectorAll('.slide_two'),
+    currentLeft = 0
+    slideWdith = 520;
+
+for ( var i = 0; i < slides_two.length; i += 1) {
+    slides_two[i].style.left = currentLeft + 'px';
+    currentLeft = currentLeft += slideWdith;
+}
+
+var container_two = document.querySelector('.container_two'),
+    currentLeft = 0;
+    realCurrentLeft = 0;
+
+
+var move = function (moveBy) {
+    container_two.style.webkitTransform = "translate3d(-" + moveBy + "px, 0px, 0px)";
+}
+
+document.getElementsByClassName('prev_two')[0].getElementsByClassName('back_two')[0].addEventListener('click', function () {
+    realCurrentLeft -= slideWdith;
+    move(realCurrentLeft);
+})
+
+document.getElementsByClassName('next_two')[0].getElementsByClassName('back_two')[0].addEventListener('click', function () {
+    realCurrentLeft -= slideWdith;
+    move(realCurrentLeft);
+})
+
+document.getElementsByClassName('prev_two')[0].getElementsByClassName('forward_two')[0].addEventListener('click', function () {
+    realCurrentLeft += slideWdith;
+    move(realCurrentLeft);
+})
+
+document.getElementsByClassName('next_two')[0].getElementsByClassName('forward_two')[0].addEventListener('click', function () {
+    realCurrentLeft += slideWdith;
+    move(realCurrentLeft);
+})
+
+/*
+for (var i = 0; i < buttons.length; i += 1) {
+    (function (currentLeft) {
+        buttons[i].addEventListener('click', function () {
+        move(currentLeft);
+        });
+    } )(currentLeft);
+    currentLeft += slideWdith;
+}
+
+var ovrflow = document.getElementsByClassName('overflow_two')[0];
+*/
+</script>
+<!-- End Mininav -->
+</div>
+</section>
+
+
+
+
+
      <section id="zqfq7ty" class="k-tl-event odd event-13">
         <div class="k-tl-event-panel no-media">
            <h2 class="k-tl-event-date-description"><span>20 March 1993</span></h2>
@@ -961,7 +1028,9 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025p7jx.jpg" alt=""></div>
+                    <div  data-pid="p025kc16" data-version-pid="p025kc18" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025p7jx.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025p7jx.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">Talks between the British government and the IRA continue despite the killing of two young boys in a bomb attack on Warrington</p>
@@ -979,15 +1048,17 @@ document.getElementsByClassName('supernav-image')[0].addEventListener('click', f
            <div class="k-tl-event-details">
               <div class="k-tl-event-media">
                  <div class="emp-wrapper">
-                    <div><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025kc2s.jpg" alt=""></div>
+                    <div  data-pid="p025kcvm" data-version-pid="p025kcvp" data-poster-template="http://ichef.bbci.co.uk/images/ic/$recipe/p025kc2s.jpg">
+                       <div class="emp-placeholder"><img src="http://ichef.bbci.co.uk/images/ic/496x279/p025kc2s.jpg" alt=""></div>
+                    </div>
                  </div>
                  <div class="k-tl-caption">
                     <p class="k-tl-caption-text">A framework document drawn up by the Prime Ministers of the UK and Ireland creates the conditions for an IRA ceasefire</p>
                  </div>
               </div>
               <p class="k-tl-event-standfirst">The IRA intensified its London bombing campaign, the loyalist paramilitaries responded by stepping up its campaign.</p>
-              <p class="k-tl-event-body-text">In 1994 the IRA carried on killing policemen, whilst the UVF and UFF carried on slaughtering Catholics in even greater numbers. People could not believe that amidst the horror, peace was still being talked about. But its beginning finally came about when the IRA announced its long-awaited ceasefire with ‘a complete cessation of military operations’. There were celebrations in Republican heartlands with Sinn Fein claiming the IRA was ‘undefeated’ but the word ‘victory’ was notably absent.</p>
-              <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/uk-northern-ireland-28957532">'It's over': Reporting the IRA ceasefire<span></span></a>
+              <p class="k-tl-event-body-text">In 1994 the IRA carried on killing policemen, whilst the UVF and UFF carried on slaughtering Catholics in even greater numbers. People could not believe that amidst the horror, peace was still being talked about. But its beginning finally came about when the IRA announced its long-awaited ceasefire with ‘a complete cessation of military operations'. There were celebrations in Republican heartlands with Sinn Fein claiming the IRA was ‘undefeated' but the word ‘victory' was notably absent.</p>
+              'a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/uk-northern-ireland-28957532">'It's over': Reporting the IRA ceasefire<span></span></a>
            </div>
         </div>
      </section>
