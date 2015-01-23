@@ -29,7 +29,13 @@ $(function() {
 
 			// Ensure the top of the event is in view for iPad
 			var valueToScroll = $("section#" + currentEventPid).offset().top;
-			$("html, body").scrollTop(valueToScroll - 120);
+			//$("html, body").scrollTop(valueToScroll - 120);
+
+			$("html, body").animate({ scrollTop: valueToScroll - 120 }, 
+			{
+				duration: 500,
+				easing: "easeInOutExpo"
+			});
 
 			if ($(selectorForClosedDrawer).is(":visible")) {
 				previousEvent = "open";
@@ -38,7 +44,7 @@ $(function() {
 			}
 		}
 
-		event.stopPropagation();
+		event.stopImmediatePropagation();
 		event.preventDefault();
 	});
 });
