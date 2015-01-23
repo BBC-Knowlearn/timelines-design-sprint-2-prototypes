@@ -1004,9 +1004,8 @@ if (window.istats_countername) {
                                         element.className = element.className === '' ? 'bigger' : '';
                                     };
                                 </script>
-                                <div id="all">
-                                    <div id="page-flip"
-                                         onmouseover="makeBigger(this)" onclick="toggleSize(this)" onmouseout="makeSmaller(this)">
+                                <div id="all" onmouseover="makeBigger(this.querySelector('#page-flip'))" onclick="toggleSize(this.querySelector('#page-flip'))" onmouseout="makeSmaller(this.querySelector('#page-flip'))">
+                                    <div id="page-flip">
                                         <div id="r1"><div id="p1">
                                             <div style="background-image:url(images/abstract-art.jpg)">
                                                 <div>Did you know...</div>
