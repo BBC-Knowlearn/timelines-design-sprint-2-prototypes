@@ -288,14 +288,14 @@ p.slide-frame {
 	width: 215px;
 	margin: 0 0 8px 8px;
 	text-align: left;
-	font-size: 1.6em;
+	font-size: 1.6em ;
 }
 
 div.slide p.slide-frame-type ,
 div.slide_two p.slide-frame-type {
 	padding: 8px;
 	background-color: #00a030;
-	font-size: 1.2rem;
+	font-size: 1.2rem !important;
 }
 
 div.slide p ,
@@ -643,39 +643,17 @@ var buttons = document.querySelectorAll('.button'),
 var move = function (moveBy) {
     container.style.webkitTransform = "translate3d(-" + moveBy + "px, 0px, 0px)";
 }
+
 document.getElementsByClassName('prev')[0].getElementsByClassName('back')[0].addEventListener('click', function () {
     realCurrentLeft -= slideWdith;
-    move(realCurrentLeft);
+    container.style.webkitTransform = "translate3d(-" + realCurrentLeft + "px, 0px, 0px)";
 })
 
-document.getElementsByClassName('next')[0].getElementsByClassName('back')[0].addEventListener('click', function () {
-    realCurrentLeft -= slideWdith;
-    move(realCurrentLeft);
-})
-
-document.getElementsByClassName('prev')[0].getElementsByClassName('forward')[0].addEventListener('click', function () {
-    realCurrentLeft += slideWdith;
-    move(realCurrentLeft);
-})
 
 document.getElementsByClassName('next')[0].getElementsByClassName('forward')[0].addEventListener('click', function () {
     realCurrentLeft += slideWdith;
-    move(realCurrentLeft);
+    container.style.webkitTransform = "translate3d(-" + realCurrentLeft + "px, 0px, 0px)";
 })
-
-/* closure loop problem
- http://stackoverflow.com/questions/2568966/how-do-i-pass-the-value-not-the-reference-of-a-js-variable-to-a-function */
-for (var i = 0; i < buttons.length; i += 1) {
-    (function (currentLeft) {
-        buttons[i].addEventListener('click', function () {
-        move(currentLeft);
-        });
-    } )(currentLeft);
-    currentLeft += slideWdith;
-}
-
-var ovrflow = document.getElementsByClassName('overflow')[0];
-var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
 
 </script>
 <!-- End Mininav -->
@@ -754,7 +732,7 @@ var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
 			<div class="secondary">
 				<span class="date-box">June - July 1982</span>
 				<p>For the 1982 tournament in Spain, the World Cup finals expanded from 16 to 24 teams. The larger finals let more teams from Africa and Asia qualify.</p>
-				<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
+				<a href="javascript:location.href='http://www.bbc.co.uk/timelines/zp2mmp3#z3fyyrd';"><img border="0" src="./sideways-journeys/read-more.png" /></a>
 			</div>
 		</div>
 		<div class="promo">
@@ -765,8 +743,8 @@ var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
 			</div>
 			<div class="secondary">
 				<span class="date-box">1984</span>
-				<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
-				<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
+				<p>The growing power of software started to help turn grand ideas into reality.</p>
+				<a href="javascript:location.href='http://www.bbc.co.uk/timelines/zxsrcdm#zgnjq6f';"><img border="0" src="./sideways-journeys/read-more.png" /></a>
 			</div>
 		</div>
 		<div class="promo">
@@ -778,7 +756,7 @@ var heroHeader = document.getElementsByClassName('k-tl-hero-header')[0];
 			<div class="secondary">
 				<span class="date-box">October 1984</span>
 				<p>This invasion of the holiest place of the Sikhs infuriated many Sikhs, even the non-militant.</p>
-				<a href="javascript:alert('go to timeline...');"><img border="0" src="./sideways-journeys/read-more.png" /></a>
+				<a href="javascript:location.href='http://www.bbc.co.uk/timelines/zw2q7ty';"><img border="0" src="./sideways-journeys/read-more.png" /></a>
 			</div>
 		</div>
 	</div>
@@ -1057,8 +1035,8 @@ var ovrflow = document.getElementsByClassName('overflow_two')[0];
                  </div>
               </div>
               <p class="k-tl-event-standfirst">The IRA intensified its London bombing campaign, the loyalist paramilitaries responded by stepping up its campaign.</p>
-              <p class="k-tl-event-body-text">In 1994 the IRA carried on killing policemen, whilst the UVF and UFF carried on slaughtering Catholics in even greater numbers. People could not believe that amidst the horror, peace was still being talked about. But its beginning finally came about when the IRA announced its long-awaited ceasefire with ‘a complete cessation of military operations'. There were celebrations in Republican heartlands with Sinn Fein claiming the IRA was ‘undefeated' but the word ‘victory' was notably absent.</p>
-              'a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/uk-northern-ireland-28957532">'It's over': Reporting the IRA ceasefire<span></span></a>
+              <p class="k-tl-event-body-text">In 1994 the IRA carried on killing policemen, whilst the UVF and UFF carried on slaughtering Catholics in even greater numbers. People could not believe that amidst the horror, peace was still being talked about. But its beginning finally came about when the IRA announced its long-awaited ceasefire with 'a complete cessation of military operations'. There were celebrations in Republican heartlands with Sinn Fein claiming the IRA was 'undefeated' but the word 'victory' was notably absent.</p>
+              <a class="k-tl-event-external-link" href="http://www.bbc.co.uk/news/uk-northern-ireland-28957532">'It's over': Reporting the IRA ceasefire<span></span></a>
            </div>
         </div>
      </section>
