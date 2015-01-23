@@ -244,10 +244,15 @@ div.h-supernav h1 {
 .overflow,
 .overflow_two {
 	width: 100%;
-	height: 146px;
 	overflow: hidden;
 	position: relative;
+    height:200px
 }
+
+@media only screen and (min-width: 600px) {
+	height: 146px;
+}
+
 
 .container,
 .container_two {
@@ -354,16 +359,24 @@ div.forward_two {
     right: 0;
 }
 
+
 div.forward,
 div.forward_two {
-	background-image: url('next_default.png');
-	background-position: 0 0;
-	background-repeat: no-repeat;
-	height: 44px;
-	width: 44px;
+    right: -25px;
+    background-image: url('next_default.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 44px;
+    width: 44px;
     text-indent: -10000px;
     top: 55px;
-    right: -38px;
+}
+
+@media only screen and (min-width: 600px) {
+    div.forward,
+    div.forward_two {
+        right: -38px;
+    }
 }
 
 div.back,
