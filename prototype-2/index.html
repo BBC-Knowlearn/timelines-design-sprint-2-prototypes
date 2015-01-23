@@ -135,15 +135,15 @@ top: 10px;
 
 
 @media only screen and (min-width: 600px) {
-.inner {	
-	padding: 20px 65px;
-}
+    .inner {	
+        padding: 20px 65px;
+    }
 }
 
 @media only screen and (min-width: 1008px) {
-.inner {
-	padding: 20px 160px;
-}
+    .inner {
+        padding: 20px 160px;
+    }
 }
 
 h3 {
@@ -257,10 +257,34 @@ div.h-supernav h1 {
 
 div.slide ,
 div.slide_two {
-	width: 520px;
-	height: 85px;
-	display: block;
-	position: absolute;
+    height: 85px;
+    display: block;
+    position: absolute;
+}
+
+p.slide-frame {
+	float: left;
+	width: 215px;
+	margin: 0;
+	text-align: left;
+	font-size: 1.6em ;
+}
+
+div.slide_two p {
+    padding-left: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    div.slide ,
+    div.slide_two {
+        width: 520px;
+
+    }
+
+    p.slide-frame {
+        margin: 0 0 0 8px;
+    }
+
 }
 
 div.slide p ,
@@ -268,13 +292,19 @@ div.slide_two p {
 	color: #333;
 }
 
-/* line 56, /Users/harrim28/workspace/kandltimelines/app/assets/scss/components/_supernav.scss */
 div.slide img ,
 div.slide_two img {
-	width: 260px;
+	width: 170px;
 	float: left;
 }
 
+@media only screen and (min-width: 600px) {
+    div.slide img ,
+    div.slide_two img {
+        width: 260px;
+        float: left;
+    }
+}
 
 p.slide-frame-type {
     font-weight: bold;
@@ -283,19 +313,13 @@ p.slide-frame-type {
     margin: 0 0 8px 8px;
 }
 
-p.slide-frame {
-	float: left;
-	width: 215px;
-	margin: 0 0 8px 8px;
-	text-align: left;
-	font-size: 1.6em ;
-}
-
 div.slide p.slide-frame-type ,
 div.slide_two p.slide-frame-type {
-	padding: 8px;
+	padding: 5px;
 	background-color: #00a030;
-	font-size: 1.2rem !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.4em !important;
 }
 
 div.slide p ,
@@ -425,21 +449,24 @@ div.back_two {
 	color: white;
 	text-align: left;
 	margin-top: 50px;
-	margin-bottom: 40px;
+	margin-bottom: 25px;
 }
 
 .slide-frame-from {
-	font-size: 1.2em !important;
+	font-size: 1.2em;
+    font-weight: normal !important;
+    color:#c8c8c8;
 }
 
 .slide-frame-from span {
 	color: #CCC;
 }
 
+.slide-frame-event {
+    font-size: 1.8em !important;
+}
+
 </style>
-
-
-
 
      <section id="z2wyvcw" class="with-connections k-tl-preamble">
         <div class="k-tl-preamble-body">
@@ -585,7 +612,7 @@ div.back_two {
                     <a href="http://www.bbc.co.uk/timelines/z2njq6f#ztcpn39">
                     	<img src="http://ichef.bbci.co.uk/images/ic/496xn/p0268zy4.jpg" width="100">
                         <p class="slide-frame-type">1975</p>
-                        <p class="slide-frame">Fighting for animal rights</p>
+                        <p class="slide-frame slide-frame-event">Fighting for animal rights</p>
                         <p class="slide-frame slide-frame-from"><span>From:</span> This story of British Zoos</p>		
                     </a>
                 </div>
@@ -593,7 +620,7 @@ div.back_two {
                     <a href="http://www.bbc.co.uk/timelines/zyp72hv#zx2k87h">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p0299tt9.jpg">                            
                         <p class="slide-frame-type">1975</p>
-                        <p class="slide-frame">Salem's Lot: King Gothic</p>
+                        <p class="slide-frame slide-frame-event">Salem's Lot: King Gothic</p>
                         <p class="slide-frame slide-frame-from"><span>From:</span> Spine-chillers and suspense: A timeline of Gothic fiction </p>		
                     </a>
                 </div>
@@ -601,15 +628,15 @@ div.back_two {
                     <a href="http://www.bbc.co.uk/timelines/zp7dwmn#zyt2mp3">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p029s3ph.jpg">                            
                         <p class="slide-frame-type">1975</p>
-                        <p class="slide-frame">The Female Man: Examining gender roles</p>
-                        <p class="slide-frame slide-frame-from"><span>From:</span>Writing the future: A timeline of science fiction literature </p>		
+                        <p class="slide-frame slide-frame-event">The Female Man: Examining gender roles</p>
+                        <p class="slide-frame slide-frame-from"><span>From:</span> Writing the future: A timeline of science fiction literature </p>		
                     </a>
                 </div>
                 <div class="slide">
                     <a href="http://www.bbc.co.uk/timelines/zp7dwmn#z3n6tfr">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p029rt0j.jpg">                            
                         <p class="slide-frame-type">1979</p>
-                        <p class="slide-frame">The Hitchhiker's Guide to the Galaxy: Laughing in space</p>
+                        <p class="slide-frame slide-frame-event">The Hitchhiker's Guide to the Galaxy: Laughing in space</p>
                         <p class="slide-frame slide-frame-from"><span>From:</span> Writing the future: A timeline of science fiction literature </p>		
                     </a>
                 </div>
@@ -907,7 +934,7 @@ document.getElementsByClassName('next')[0].getElementsByClassName('forward')[0].
                     <a href="http://www.bbc.co.uk/timelines/zp2mmp3#z9rccdm">
                     	<img src="http://ichef.bbci.co.uk/images/ic/496xn/p020ty9f.jpg" width="100">
                         <p class="slide-frame-type">June - July 1990</p>
-                        <p class="slide-frame">Italy</p>
+                        <p class="slide-frame slide-frame-event">Italy</p>
                         <p class="slide-frame slide-frame-from"><span>From:</span> The story of the Fifa World Cup</p>		
                     </a>
                 </div>
@@ -915,7 +942,7 @@ document.getElementsByClassName('next')[0].getElementsByClassName('forward')[0].
                     <a href="http://www.bbc.co.uk/timelines/z2njq6f#zqf72hv">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p0269bq5.jpg">                            
                         <p class="slide-frame-type">1991</p>
-                        <p class="slide-frame">London Zoo almost closes</p>
+                        <p class="slide-frame slide-frame-event">London Zoo almost closes</p>
                         <p class="slide-frame slide-frame-from"><span>From:</span> The story of British zoos </p>		
                     </a>
                 </div>
@@ -923,7 +950,7 @@ document.getElementsByClassName('next')[0].getElementsByClassName('forward')[0].
                     <a href="http://www.bbc.co.uk/timelines/ztrpn39#zy249j6">
                         <img width="100" src="http://ichef.bbci.co.uk/images/ic/496xn/p026qzcw.jpg">                            
                         <p class="slide-frame-type">1989</p>
-                        <p class="slide-frame">The Claim of Right</p>
+                        <p class="slide-frame slide-frame-event">The Claim of Right</p>
                         <p class="slide-frame slide-frame-from"><span>From:</span> Scotland's road to referendum</p>		
                     </a>
                 </div>
